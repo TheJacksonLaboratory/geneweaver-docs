@@ -1,0 +1,49 @@
+site_name: GeneWeaver
+theme:
+  name: material
+  logo: assets/GW2-logo.png
+  icon:
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: geneweaver
+      media: "(prefers-color-scheme: light)"
+#      primary: green
+#      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+#    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+  #    - navigation.tabs.sticky
+  #    - header.autohide
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+extra_css:
+  - stylesheets/extra.css
+repo_name: bergsalex/geneweaver-docs
+repo_url: https://github.com/bergsalex/geneweaver-docs
+edit_uri: edit/main/docs/
+extra:
+  generator: false
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html

@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "geneweaver-docs"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Berger <alexander.berger@jax.org>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.9"
+mkdocs-material = "^9.0.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
