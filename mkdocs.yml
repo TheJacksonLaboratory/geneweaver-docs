@@ -2,6 +2,7 @@ site_name: GeneWeaver
 theme:
   name: material
   logo: assets/GW2-logo.png
+  favicon: assets/GW2-logo.png
   icon:
     repo: fontawesome/brands/git-alt
   font:
@@ -27,10 +28,11 @@ theme:
     - navigation.tracking
 #    - navigation.tabs
     - navigation.sections
-    - navigation.expand
+#    - navigation.expand
     - navigation.indexes
   #    - navigation.tabs.sticky
   #    - header.autohide
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -47,3 +49,33 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Web Application: getting-started/web-application.md
+      - Command Line Interface: getting-started/command-line-interface.md
+      - Running Tools Locally: getting-started/running-tools-locally.md
+#      - Contributing to Packages: getting-started/contributing-to-packages.md
+#      - Contributing to Documentation: getting-started/contributing-to-documentation.md
+  - Concepts:
+      - concepts/index.md
+      - Genes and GeneSets: concepts/genes-and-genesets.md
+      - Geneweaver Data Model: concepts/geneweaver-data-model.md
+      - External Source Data: concepts/geneweaver-data.md
+      - Package Based Architecture: concepts/package-based-architecture.md
+  - Tutorial:
+      - tutorial/index.md
+      - Accessing Geneweaver Data: tutorial/accessing-geneweaver-data.md
+      - Running a Local Database: tutorial/running-a-local-database.md
+      - Creating New Tools: tutorial/creating-new-tools.md
+      - Testing New Tools: tutorial/testing-new-tools.md
+      - Exploring Data in Javascript: tutorial/exploring-data-in-javascript.md
+      - Creating a New Documentation Site: tutorial/creating-a-new-documentation-site.md
+  - Reference:
+      - reference/index.md
+      - Available Packages: reference/available-packages.md
+      - Available Tools: reference/available-tools.md
+      - Contributing Guide: reference/contributing-guide.md
+      - Development Guide: reference/development-guide.md
+      - ReST API: reference/restful-api.md
