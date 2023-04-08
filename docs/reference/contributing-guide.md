@@ -75,15 +75,14 @@ as much feedback as possible to the developer.
     You can find comprehensive documentation on theses rulesets in the
     [ruff documentation](https://beta.ruff.rs/docs/rules/)
 
-### Code Formatting - Black and Isort
+### Code Formatting - Black and Ruff
 All code in the `geneweaver-*` ecosystem is formatted using 
 [black](https://github.com/psf/black) and [isort](https://pycqa.github.io/isort/).
 
 ### Development Process
 Before submitting a pull request, please run the following commands to check your code:
 ```bash
-ruff check src/geneweaver tests
-isort src/geneweaver tests
+ruff check src/geneweaver tests --fix
 black src/geneweaver tests
 pytest tests
 ```

@@ -49,10 +49,14 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 nav:
   - Home: index.md
   - Getting Started:
       - getting-started/index.md
+      - Foundational Concepts: getting-started/foundational-concepts.md
       - Web Application: getting-started/web-application.md
       - Command Line Interface: getting-started/command-line-interface.md
       - Running Tools Locally: getting-started/running-tools-locally.md

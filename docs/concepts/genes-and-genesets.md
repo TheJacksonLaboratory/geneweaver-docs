@@ -24,16 +24,3 @@ pathways such as the p53 signaling pathway or the cell cycle pathway, the resear
 might be able to identify genes or pathways that are dysregulated in the cancer samples.
 
 
-## Species
-Currently, 10 species are supported:
-
-- Mus musculus,
-- Homo sapiens,
-- Rattus norvegicus, 
-- Danio rerio,
-- Drosophilia melanogaster,
-- Macaca mulatta,
-- Caenorhabditis elegans, 
-- Saccharomyces cervisiae,
-- Gallus gallus, and
-- Canis familiaris. 
