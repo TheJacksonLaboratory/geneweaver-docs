@@ -8,79 +8,135 @@
     <em>A system for the integration and analysis of heterogeneous functional genomics data.</em>
 </p>
 
-[//]: # (!!! Warning)
-
-[//]: # (    This documentation is a work in progress. Please check back often for updates.)
-
 ---
-**Web Application**: [https://www.geneweaver.org](https://www.geneweaver.org)
+**Web Application**: 
+[https://www.geneweaver.org](https://www.geneweaver.org)
 
-**Web Application Documentation**: [https://geneweaver.org/help/](https://geneweaver.org/help/)
+**Web Application Documentation**: 
+[https://geneweaver.org/help/](https://geneweaver.org/help/)
 
-**Project Documentation (this site)**: [https://bergsalex.github.io/CS-8674/](https://bergsalex.github.io/geneweaver-docs/)
-
-**Source Code**
-
+**Project Documentation (this site)**: 
+[https://bergsalex.github.io/geneweaver-docs/](https://bergsalex.github.io/geneweaver-docs/)
 ---
+
+
+## Components of GeneWeaver
 GeneWeaver is two things: 
 
-1. A web application, and 
-2. An ecosystem of software packages.
+1. A web application 🖥️, and 
+2. An ecosystem of software packages ⚙️.
 
-GeneWeaver is both a web-application and an ecosystem of software tools. It is a community driven project with the goal
-of enabling and enabling and advancing Genomics Research, and providing a platform and community to enable students and
-educators to engage with computational genomics in a variety of disciplines.
+**Genomics Researchers** will find the web application useful as a fully integrated 
+platform for the analysis of heterogeneous functional genomics data.
 
-This website brings together the technical documentation for the Geneweaver project. This documentation is 
-intended to be a resource for software contributors, educators and students, and scientific curators and genomic 
-researchers.
+**Educators**, **students** and **software developers** will find the ecosystem of 
+software packages useful for the development of new tools and applications.
 
-## GeneWeaver for Educators
+## What is this Documentation?
+This documentation is intended to be the foundational documentation for the entire
+Geneweaver software ecosystem. It provides an introduction to the system and ways of
+working with it, explanations of core concepts, tutorials of general utility,
+as well as detailed reference documentation for the various components and processes
+that make up the system.
 
-### Computer Science
+## GeneWeaver Use Cases
+Your entrypoint to GeneWeaver will depend on who you are, and what you would like to
+do with GeneWeaver. The following sections will help you find the right place to start
+depending on our best guess as to your goals, based on who you are. Ultimately, you
+will need to make your own decisions about what approach works best for you.
 
-### Biology
+=== "Researchers 🔬"
+    Geneweaver is a valuable resource for any genomics researchers looking to integrate and 
+    analyze complex datasets in order to gain new insights into biological processes and 
+    pathways.
 
-### Bioinformatics
+    Geneweaver allows researchers to easily compare and combine datasets from various 
+    sources and analyze the results in an interactive and user-friendly interface. The 
+    system includes a large collection of publicly available datasets, including gene 
+    expression data, protein-protein interactions, and gene ontology annotations, among 
+    others. Geneweaver is a valuable resource for researchers in the field of genomics and 
+    can be used to identify novel gene interactions and pathways, as well as to explore the 
+    functional relationships between genes and biological processes.
+=== "Educators & Students 📚"
+    For educators, GeneWeaver provides a comprehensive platform for integrating real world 
+    data and open sources software into the classroom. GeneWeaver provides data, tools, 
+    systems, and workflows that can be used to teach students about genomics, 
+    bioinformatics, computer science and data science. 
 
-### Combinatorics
+    GeneWeaver allows students and educators to integrate with a full cycle of development 
+    and learning, starting with application to real-world concepts and data, and ending with
+    the development and contribution of new tools and applications.
 
-## GeneWeaver for Researchers
+    The following disciplines might find GeneWeaver useful:
 
+    - **Computer Science**
+        - Algorithms
+        - Software Engineering
+        - Databases
+        - Data Science
+    - **Biology and Genomics**
+    - **Bioinformatics**
+    - **Mathematics**
+=== "Software Developers 💻"
+    
 
+[//]: # (### Researchers)
 
+[//]: # (Geneweaver is a valuable resource for any genomics researchers looking to integrate and )
 
+[//]: # (analyze complex datasets in order to gain new insights into biological processes and )
 
-[//]: # (The documentation is divided into three sections:)
+[//]: # (pathways.)
 
 [//]: # ()
-[//]: # ([Contribution Guidelines]&#40;../docs-aside/Contributing&#41;{ .md-button })
+[//]: # (Geneweaver allows researchers to easily compare and combine datasets from various )
+
+[//]: # (sources and analyze the results in an interactive and user-friendly interface. The )
+
+[//]: # (system includes a large collection of publicly available datasets, including gene )
+
+[//]: # (expression data, protein-protein interactions, and gene ontology annotations, among )
+
+[//]: # (others. Geneweaver is a valuable resource for researchers in the field of genomics and )
+
+[//]: # (can be used to identify novel gene interactions and pathways, as well as to explore the )
+
+[//]: # (functional relationships between genes and biological processes.)
 
 [//]: # ()
-[//]: # (- Contribution Guidelines Documentation providing guidelines for contributing to the Geneweaver )
+[//]: # (### Educators & Students)
 
-[//]: # (   project. These documentation pages are intended to be a resource for all contributors to the Geneweaver project.)
+[//]: # (For educators, GeneWeaver provides a comprehensive platform for integrating real world )
 
-[//]: # ()
-[//]: # ([Website Documentation]&#40;Website%20Documentation&#41;{ .md-button })
+[//]: # (data and open sources software into the classroom. GeneWeaver provides data, tools, )
 
-[//]: # ()
-[//]: # (- Documentation providing technical details describing usage of the )
+[//]: # (systems, and workflows that can be used to teach students about genomics, )
 
-[//]: # (Geneweaver website. These tutorials and reference pages cover all aspects of using the Geneweaver website, from)
-
-[//]: # (basic usage to advanced features. These documentation pages are intended to be a resource for scientific curators)
-
-[//]: # (and genomic researchers.)
+[//]: # (bioinformatics, computer science and data science. )
 
 [//]: # ()
-[//]: # ([Textbooks]&#40;../docs-aside/Textbooks&#41;{ .md-button })
+[//]: # (GeneWeaver allows students and educators to integrate with a full cycle of development )
+
+[//]: # (and learning, starting with application to real-world concepts and data, and ending with)
+
+[//]: # (the development and contribution of new tools and applications.)
 
 [//]: # ()
-[//]: # (- Documentation and tutorials on utilizing the Geneweaver project and its resources in an )
+[//]: # (The following disciplines might find GeneWeaver useful:)
 
-[//]: # (educational context. This documentation provides examples and frameworks for utilizing the Geneweaver project in both)
+[//]: # ()
+[//]: # (- **Computer Science**)
 
-[//]: # (single subject and multidisciplinary educational contexts. These documentation pages are intended to be a resource)
+[//]: # (    - Algorithms)
 
-[//]: # (for both educators and students.)
+[//]: # (    - Software Engineering)
+
+[//]: # (    - Databases)
+
+[//]: # (    - Data Science)
+
+[//]: # (- **Biology and Genomics**)
+
+[//]: # (- **Bioinformatics**)
+
+[//]: # (- **Mathematics**)
