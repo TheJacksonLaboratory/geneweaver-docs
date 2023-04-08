@@ -3,8 +3,8 @@ This section provides a quick introduction to some key concepts that underpin th
 Geneweaver ecosystem. This section should be enough to get you started, but for a 
 comprehensive definition, please see the [Concepts](../concepts/index.md) section.
 
-## Genes (Genomic Features)
-In GeneWeaver, a "Gene" is a unique identifier for a gene in a particular organism. 
+## Genes (Genomic Features) 
+In GeneWeaver, a "Gene" 🧬 is a unique identifier for a gene in a particular organism. 
 Genes are the basic unit of analysis, and are used to build GeneSets. GeneWeaver 
 identifies genes using their unique identifiers, which are called "Gene Identifiers".
 A gene identifier is a unique name or number assigned to a gene. 
@@ -17,11 +17,11 @@ across all data sources.
 For more information about Genes and GeneSets, please see the
 [Genes and GeneSets](../concepts/genes-and-genesets.md) page.
 
-## GeneSets
-The central entity in GeneWeaver is called a "GeneSet". A GeneSet  is a collection of 
-genomic features that are related by a common biological function, pathway, process, or other
-biological concept. GeneSets are used to organize and analyze heterogeneous functional
-genomics data.
+## GeneSets 
+The central entity in GeneWeaver is called a "GeneSet" 🧬+📂. A GeneSet  is a collection
+of genomic features that are related by a common biological function, pathway, process, 
+or other biological concept. GeneSets are used to organize and analyze heterogeneous 
+functional genomics data.
 
 Genesets are a fundamental component of Geneweaver, as the system uses them to perform 
 integrative analysis of functional genomics data. Researchers can compare and combine 

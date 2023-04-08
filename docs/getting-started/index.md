@@ -13,7 +13,7 @@ If you're already familiar with Geneweaver, and just need to find content specif
 your use-case, you can use the following links to jump to the appropriate documentation.
 If you find that you need more information, head back to this website and keep reading!
 
-=== "Researchers"
+=== "Researchers 🔬"
     Genomics researchers will find the web application to be the most straightforward
     way to get started with GeneWeaver. The web application is a fully integrated platform
     for the analysis of heterogeneous functional genomics data. Without ever leaving the 
@@ -36,20 +36,21 @@ If you find that you need more information, head back to this website and keep r
     information in the [Running Tools Locally](./running-tools-locally.md) section.
 
 
-=== "Educators & Students"
+=== "Educators & Students 📚"
     Educators and students will find the ecosystem of software packages to be the most
     straightforward way to get started with GeneWeaver. The ecosystem of software packages
     is a collection of python packages that are used to build the GeneWeaver web application.
 
-=== "Software Developers"
+=== "Software Developers 💻"
     If you just want to get started using Geneweaver to build cool stuff 💻, the 
     [Available Packages](../reference/available-packages.md) section might be what you
     want.
 
 !!! tip "What's Next?"
     If you're new to Geneweaver, the documentation in this website is probably best read
-    in order. Next up, we'll discuss [Foundational Concepts](./foundational-concepts.md)
-    that underpin the entire Geneweaver ecosystem.
+    in order. Next up, we'll discuss the 
+    [Foundational Concepts](./foundational-concepts.md) that underpin the entire 
+    Geneweaver software ecosystem.
 
     Click the "[Next](./foundational-concepts.md)" button on the bottom of the page to continue your journey.
     

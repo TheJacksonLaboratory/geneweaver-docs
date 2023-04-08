@@ -45,7 +45,7 @@ do with GeneWeaver. The following sections will help you find the right place to
 depending on our best guess as to your goals, based on who you are. Ultimately, you
 will need to make your own decisions about what approach works best for you.
 
-=== "Researchers"
+=== "Researchers 🔬"
     Geneweaver is a valuable resource for any genomics researchers looking to integrate and 
     analyze complex datasets in order to gain new insights into biological processes and 
     pathways.
@@ -57,7 +57,7 @@ will need to make your own decisions about what approach works best for you.
     others. Geneweaver is a valuable resource for researchers in the field of genomics and 
     can be used to identify novel gene interactions and pathways, as well as to explore the 
     functional relationships between genes and biological processes.
-=== "Educators & Students"
+=== "Educators & Students 📚"
     For educators, GeneWeaver provides a comprehensive platform for integrating real world 
     data and open sources software into the classroom. GeneWeaver provides data, tools, 
     systems, and workflows that can be used to teach students about genomics, 
@@ -77,8 +77,9 @@ will need to make your own decisions about what approach works best for you.
     - **Biology and Genomics**
     - **Bioinformatics**
     - **Mathematics**
-=== "Software Developers"
-    "
+=== "Software Developers 💻"
+    
+
 [//]: # (### Researchers)
 
 [//]: # (Geneweaver is a valuable resource for any genomics researchers looking to integrate and )

@@ -23,6 +23,11 @@ In the examples below, we will utilize the
 
 ## Installation
 
+!!! danger "Coming Soon"
+    The local tools are currently in development, and are not yet available for 
+    download. This section is a work in progress and will be updated as the tools become
+    available.
+
 === "Container Image (Recommended)"
     The recommended way to run the tools locally is to use the container images that are 
     available on [Docker Hub](https://hub.docker.com/u/geneweaver).
