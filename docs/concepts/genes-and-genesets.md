@@ -25,7 +25,7 @@ pathways such as the p53 signaling pathway or the cell cycle pathway, the resear
 might be able to identify genes or pathways that are dysregulated in the cancer samples.
 
 ### Geneset Tiers
-Genesets are organized into a hierarchy of tiers 🥇🥈🥉🎀🌼, which are used to provide an easily 
+Genesets are organized into a hierarchy of tiers 🥇🥈🥉🌱🔒, which are used to provide an easily 
 recognizable and intuitive way for users to understand the quality and reliability of
 the data in a geneset.
 
@@ -34,8 +34,8 @@ the data in a geneset.
 | 🥇**Tier I**<br/>Public Resource Data                   | Professionally curated into another major database and are imported into GeneWeaver,which ensures consistency of metadata.            |
 | 🥈**Tier II**<br/>Machine-Generated from public sources | Computationally generated from data in public sources.                                                                                |
 | 🥉**Tier III**<br/>Human-Curated Data                   | Directly entered or reviewed by a professional curator for redundancy with existing records and adherence to documentation standards. |
-| 🎀**Tier IV**<br/>Submitted to Public-Provisional       | User submitted data that has been shared to the public prior to review.                                                               |
-| 🌼**Tier V**<br/>Private User and Group Data, Uncurated | Private data that is considered _confidential_ and **is not** reviewed by a professional curator.                                     |
+| 🌱**Tier IV**<br/>Submitted to Public-Provisional       | User submitted data that has been shared to the public prior to review.                                                               |
+| 🔒**Tier V**<br/>Private User and Group Data, Uncurated | Private data that is considered _confidential_ and **is not** reviewed by a professional curator.                                     |
 
 !!! tip
     For reference level description of Genset Tiers, see the
