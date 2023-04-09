@@ -80,6 +80,7 @@ nav:
       - reference/index.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
+      - Data Model: reference/data-model.md
       - Contributing Guide: reference/contributing-guide.md
       - Development Guide: reference/development-guide.md
       - ReST API: reference/restful-api.md
