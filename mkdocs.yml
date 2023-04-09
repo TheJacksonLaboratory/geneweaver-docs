@@ -45,6 +45,7 @@ extra:
   generator: false
 markdown_extensions:
   - admonition
+  - tables
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
@@ -52,6 +53,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
   - Getting Started:
@@ -80,6 +86,7 @@ nav:
       - reference/index.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
+      - Data Model: reference/data-model.md
       - GeneSet Tiers: reference/geneset-tiers.md
       - Contributing Guide: reference/contributing-guide.md
       - Development Guide: reference/development-guide.md
