@@ -21,13 +21,13 @@ These data sources include:
 ## Background
 Why bother with all these external data sources? Why not just use one?
 
-In genomics research, there are different typqes of gene and microarray identifiers 
+In genomics research, there are different types of gene and microarray identifiers 
 because the same gene can be referred to by different names or IDs, depending on the 
 context or the source of the information. This can happen even for genomic features 
 within the same species! All these different identifiers can create confusion and make 
 it difficult to compare and integrate data from different sources.
 
-Why are there so many different identifiers, you ask? There are a multitude of reason,
+Why are there so many different identifiers, you ask? There are a multitude of reasons,
 some of which are:
 
 **Historical reasons**: The naming and annotation of genes has evolved over time, and 
