@@ -45,8 +45,28 @@ A basic workflow for a user of the web application is as follows:
 
 ## Continued Exploration
 
-To learn more, you can either jump right in and head over to the
-[GeneWeaver Web Application](https://geneweaver.org){ .md-button }
+=== "Researchers 🔬"
+    To learn more, you can either jump right in and head over to the
+    [GeneWeaver Web Application](https://geneweaver.org){ .md-button }
 
-Or you can read the extensive documentation that is specific to the web application:
-[Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
+    Or you can read the extensive documentation that is specific to the web application:
+    [Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
+
+=== "Educators & Students 📚"
+    !!! warning "Work in Progress"
+        To learn more, you can either jump right in and head over to the
+
+        [GeneWeaver Web Application](https://geneweaver.org){ .md-button }
+
+        Or you can read the extensive documentation that is specific to the web application:
+        [Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
+
+=== "Software Developers 💻"
+    !!! warning "Work in Progress"
+        To learn more, you can either jump right in and head over to the
+
+        [GeneWeaver Web Application](https://geneweaver.org){ .md-button }
+
+        Or you can read the extensive documentation that is specific to the web application:
+        [Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
+

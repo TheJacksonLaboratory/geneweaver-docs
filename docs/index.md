@@ -78,65 +78,16 @@ will need to make your own decisions about what approach works best for you.
     - **Bioinformatics**
     - **Mathematics**
 === "Software Developers 💻"
+    For software developers, GeneWeaver provides a suite of open source software 
+    packages that can be used for the development of new tools and applications. 
+    GeneWeaver is built on a collection of open source software 
+    packages. A software developer could use all or some of that ecosystem to build new
+    applications and tools.
+
+    Software developers can leverage the ecosystem of open source Python packages used 
+    in Geneweaver.org through its package-based architecture to build new bioinformatics 
+    tools and applications, contribute to existing packages, integrate with other tools,
+    and address specific needs or gaps in the ecosystem.
+
+
     
-
-[//]: # (### Researchers)
-
-[//]: # (Geneweaver is a valuable resource for any genomics researchers looking to integrate and )
-
-[//]: # (analyze complex datasets in order to gain new insights into biological processes and )
-
-[//]: # (pathways.)
-
-[//]: # ()
-[//]: # (Geneweaver allows researchers to easily compare and combine datasets from various )
-
-[//]: # (sources and analyze the results in an interactive and user-friendly interface. The )
-
-[//]: # (system includes a large collection of publicly available datasets, including gene )
-
-[//]: # (expression data, protein-protein interactions, and gene ontology annotations, among )
-
-[//]: # (others. Geneweaver is a valuable resource for researchers in the field of genomics and )
-
-[//]: # (can be used to identify novel gene interactions and pathways, as well as to explore the )
-
-[//]: # (functional relationships between genes and biological processes.)
-
-[//]: # ()
-[//]: # (### Educators & Students)
-
-[//]: # (For educators, GeneWeaver provides a comprehensive platform for integrating real world )
-
-[//]: # (data and open sources software into the classroom. GeneWeaver provides data, tools, )
-
-[//]: # (systems, and workflows that can be used to teach students about genomics, )
-
-[//]: # (bioinformatics, computer science and data science. )
-
-[//]: # ()
-[//]: # (GeneWeaver allows students and educators to integrate with a full cycle of development )
-
-[//]: # (and learning, starting with application to real-world concepts and data, and ending with)
-
-[//]: # (the development and contribution of new tools and applications.)
-
-[//]: # ()
-[//]: # (The following disciplines might find GeneWeaver useful:)
-
-[//]: # ()
-[//]: # (- **Computer Science**)
-
-[//]: # (    - Algorithms)
-
-[//]: # (    - Software Engineering)
-
-[//]: # (    - Databases)
-
-[//]: # (    - Data Science)
-
-[//]: # (- **Biology and Genomics**)
-
-[//]: # (- **Bioinformatics**)
-
-[//]: # (- **Mathematics**)
