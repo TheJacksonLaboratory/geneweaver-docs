@@ -29,6 +29,10 @@ multiple genesets to identify overlaps or similarities, which can provide insigh
 the biological processes and pathways that are involved in the data being analyzed.
 
 ## Species
+Genomic features in Geneweaver are mapped within and across multiple species. Cross 
+species analysis enables the discovery of conserved mechanisms of biological functions, 
+and the discovery of divergent functions served by conserved biological mechanisms.
+
 Currently, 10 species are supported:
 
 - Mus musculus - The Mouse 🐁
