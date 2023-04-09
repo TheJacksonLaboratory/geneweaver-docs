@@ -28,26 +28,25 @@ within the same species! All these different identifiers can create confusion an
 it difficult to compare and integrate data from different sources.
 
 Why are there so many different identifiers, you ask? There are a multitude of reasons,
-some of which are:
+some of which are historical, some of which are technical, and some of which inherent to
+biology. 
 
-**Historical reasons**: The naming and annotation of genes has evolved over time, and 
-different naming conventions have been used by different researchers and databases. As a
-result, a given gene may have multiple names or IDs that have been used in different 
-contexts.
+A given gene may have multiple names or IDs that have been used in different 
+contexts as a result of how naming and annotation has evolved over time. It also can be
+the case that different databases just used different conventions. Annotations and
+naming conventions are also updated as new information about the function and structure 
+of genes becomes available.
 
-**Genome annotation updates**: As new information becomes available about the function 
-and structure of genes, the genome annotations may be updated to reflect this new 
-information. This can result in changes to the gene names or IDs used to refer to 
-particular genes.
+Genotype platforms, the methods or tool used to identify and detect genetic variations,
+can differ in their design and layout, which can affect the way genes are represented.
+This can lead to different probe IDs or other identifiers being used to refer to the 
+same genomic features on different platforms.
 
-**Platform-specific differences**: Microarray platforms can differ in their design and 
-layout, which can affect the way genes are represented on the microarray. This can lead 
-to different probe IDs or other identifiers being used to refer to the same gene across 
-different microarray platforms.
-
-**Species-specific differences**: Gene and microarray identifiers can also differ 
-between different species, since different organisms may have different sets of genes or 
-different naming conventions for those genes.
+Genomic feature identifiers can also differ between different species, since different 
+organisms have different sets of genes and thus different naming conventions for those 
+genes. Even if the same identifier is used across species, it may not refer to the
+same genomic feature, and the genomic feature itself might have entirely different 
+function. 
 
 ## GeneWeaver's Solution
 GeneWeaver solves this problem by integrating data from multiple sources (listed above)
