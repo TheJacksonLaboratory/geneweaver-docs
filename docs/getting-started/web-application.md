@@ -53,6 +53,7 @@ A basic workflow for a user of the web application is as follows:
     [Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
 
 === "Educators & Students 📚"
+    [//]: # (TODO)
     !!! warning "Work in Progress"
         To learn more, you can either jump right in and head over to the
 
@@ -62,6 +63,7 @@ A basic workflow for a user of the web application is as follows:
         [Geneweaver Web Application Documentation](https://geneweaver.org/help/){ .md-button }
 
 === "Software Developers 💻"
+    [//]: # (TODO)
     !!! warning "Work in Progress"
         To learn more, you can either jump right in and head over to the
 
