@@ -67,11 +67,11 @@ sequenceDiagram
     ```
     
 === "Educators & Students 📚"
-[//]: # (TODO)
+    [//]: # (TODO)
     !!! note "Coming Soon"
         Documentation for educators and students is coming soon.
 
 === "Software Developers 💻"
-[//]: # (TODO)
+    [//]: # (TODO)
     !!! note "Coming Soon"
         Documentation for software developers is coming soon.

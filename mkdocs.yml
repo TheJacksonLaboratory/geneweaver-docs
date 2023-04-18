@@ -42,7 +42,7 @@ repo_name: bergsalex/geneweaver-docs
 repo_url: https://github.com/bergsalex/geneweaver-docs
 edit_uri: edit/main/docs/
 extra:
-  generator: false
+  generator: true
 markdown_extensions:
   - admonition
   - tables
