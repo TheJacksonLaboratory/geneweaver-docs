@@ -3,41 +3,45 @@ A scientific workflow is a series of interconnected tasks or computational steps
 that are designed to solve a specific problem or address a scientific question. 
 
 [Nextflow](https://www.nextflow.io/) and 
-[Cromwell](https://cromwell.readthedocs.io/en/stable/) are examples of tools that allow 
-researchers to define, automate, and execute such workflows.
+[Cromwell](https://cromwell.readthedocs.io/en/stable/) are examples of programs that 
+allow researchers to define, automate, and execute such workflows.
 
-Scientific workflow can be beneficial when an analysis involves multiple steps, is 
+Scientific workflows can be beneficial when an analysis involves multiple steps, is 
 complex, needs to be repeated, involves different platforms or environments, or requires
 collaboration.
 
 ## Workflows in Geneweaver
-Geneweaver uses scientific workflows to define analysis tools. This allows researchers
-to define complex analysis tools that can be used by other researchers in the Geneweaver
-web application.
+Geneweaver uses scientific workflows as part of its model for how its analysis
+tools are defined and executed. The `geneweaver.tools.framework` module provides a
+`AbstractTool` class that, when used, allows Geneweaver to infer the workflow definition
+for single step analysis tools. The `AbstractTool` class also provides a mechanism
+for defining workflow definitions for more complex analysis tools that require 
+multiple steps or complex execution environments that would be difficult for the 
+application to infer.
 
-For single step analysis tools, the workflow definition can be inferred by the 
-Geneweaver web application. 
+By default, Geneweaver uses the [Nextflow](https://www.nextflow.io/) workflow engine to 
+define and execute workflows. Support for 
+[Cromwell](https://cromwell.readthedocs.io/en/stable/) is planned for a future release.
+
+??? info "How Does Geneweaer Do This?"
+    Geneweaver uses a service that implements the
+    [Ga4GH WES](https://ga4gh.github.io/workflow-execution-service-schemas/docs/)
+    specification to define and execute workflows.
+
+    The service is responsible for executing the workflow and returning the results to
+    Geneweaver.
+    
+    Geneweaver's WES service is known as "WESly" and is currently in development. If you 
+    are interested in contributing to the development of WESly, head over to the
+    [WESly GitHub repository](https://github.com/bergsalex/wesly).
+    
 
 ### Why Use Workflows?
 Geneweaver uses scientific workflows as part of its analysis model for many of the 
-same reasons scientists use them in their research. Utilizing workflow also allows
-Geneweaver to utilize the same tools that scientists use to define and execute their
-workflows.
+same reasons scientists use them in their research. Workflows allow Geneweaver
+to define and execute complex analysis tools in a way that is easy to understand
+and share with others, and which is both reproducible and platform agnistic.
 
-In general, scientific workflows can be beneficial for the following reasons:
-
-1) Reproduce scientific results: Workflows can be shared with others and executed on 
-different platforms to ensure that scientific results can be replicated.
-
-2) Scale up data processing: Scientific workflows can be executed on a variety of 
-infrastructures, including cloud resources and high-performance computing clusters, to 
-enable large-scale data processing.
-
-3) Improve productivity: Workflows automate complex tasks and reduce the amount of 
-manual intervention required, freeing up researchers' time for more creative tasks.
-
-4) Ensure reproducibility: Scientific workflows provide a record of the steps taken to 
-process data and can be used to ensure that results are reproducible and transparent.
-
-5) Collaborate with others: Workflows can be easily shared and modified by collaborators, 
-enabling more efficient and productive collaboration.
+Utilizing workflows as the baseline for how Geneweaver implements analysis tools also 
+allows Geneweaver to utilize the processes that scientists and researchers use when
+defining and executing their own workflows. 
