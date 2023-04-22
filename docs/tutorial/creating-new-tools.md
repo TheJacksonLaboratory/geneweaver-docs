@@ -8,9 +8,10 @@ and then write the interface for your tool in JavaScript. The Python interface w
 be used to run your tool locally, and the JavaScript interface will be used to run
 your tool in the web application.
 
-Beneath the python interface, you can use any language you want to implement your
-tool. The only requirements are that your tool must have a public interface implemented 
-in Python, described below, and that your tool must be available as a Docker image.
+Your analysis tool does **not** need to be implemented in Python. It can be implemented
+in any language that can be run in a Docker container. The only requirements are that 
+your tool must have a public interface implemented in Python, described below, and that 
+your tool must be available as a Docker image.
 
 ## Quick Start
 ### Python
@@ -58,9 +59,9 @@ the following command:
 ### Tool Class
 
 The `AbstractTool` class is actually fairly simple, and only requires you to implement
-a few methods. However, the `AbstractTool` class does provide a lot of functionality
-that you can use to make your tool easier to use. Key to this usability is the 
-framework's utilization of the [`Pydantic`](https://docs.pydantic.dev/) package.
+a few methods. Despite it's simplicity, the `AbstractTool` class provides a lot of 
+functionality that you can use to make your tool easier to use. Key to this usability is
+the framework's utilization of the [`Pydantic`](https://docs.pydantic.dev/) package.
 
 #### Pydantic
 
