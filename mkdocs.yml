@@ -81,7 +81,7 @@ nav:
       - Creating New Tools: tutorial/creating-new-tools.md
       - Testing New Tools: tutorial/testing-new-tools.md
       - Exploring Data in Javascript: tutorial/exploring-data-in-javascript.md
-      - Creating a New Documentation Site: tutorial/creating-a-new-documentation-site.md
+      - Creating Documentation Sites: tutorial/creating-a-new-documentation-site.md
   - Reference:
       - reference/index.md
       - Available Packages: reference/available-packages.md

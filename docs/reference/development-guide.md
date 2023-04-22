@@ -22,3 +22,11 @@ All packages in the `geneweaver-*` ecosystem use
 [PyTest](https://docs.pytest.org/en/7.2.x/) as their test runner.
 
 ## Package Based Architecture
+!!! tip "Package Based Architecture"
+    The `geneweaver-*` ecosystem is built around the concept of a package based 
+    architecture. This means that each package in the ecosystem is designed to be 
+    independent of the other packages. This allows for the ecosystem to be extended 
+    and modified without breaking the other packages.
+
+    For more information, see the 
+    [Package Based Architecture](../../concepts/package-based-architecture) page.
