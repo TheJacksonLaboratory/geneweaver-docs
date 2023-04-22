@@ -40,7 +40,7 @@ define and execute workflows. Support for
 Geneweaver uses scientific workflows as part of its analysis model for many of the 
 same reasons scientists use them in their research. Workflows allow Geneweaver
 to define and execute complex analysis tools in a way that is easy to understand
-and share with others, and which is both reproducible and platform agnistic.
+and share with others, and which is both reproducible and platform-agnostic.
 
 Utilizing workflows as the baseline for how Geneweaver implements analysis tools also 
 allows Geneweaver to utilize the processes that scientists and researchers use when
