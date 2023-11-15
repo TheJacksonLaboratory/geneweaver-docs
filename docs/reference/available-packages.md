@@ -12,7 +12,9 @@ A command line interface interacting with GeneWeaver ReST APIs.
 GeneWeaver's shared automated tests.
 - [`geneweaver-tools`](https://pypi.org/project/geneweaver-tools/):
 A framework for creating analysis tools for the GeneWeaver project.
-- [`geneweaver-db`](https://pypi.org/project/jax-geneweaver-db/): 
+- [`geneweaver-boolean-algebra`](https://pypi.org/project/geneweaver-boolean-algebra/):
+A package for performing boolean algebra operations on GeneWeaver data.
+- [`geneweaver-db`](https://pypi.org/project/geneweaver-db/): 
 A package for interacting with the GeneWeaver database.
 
 Each package has its own documentation and code repository, which can be found in the 
@@ -27,13 +29,15 @@ graph LR
     G[GeneWeaver Application]
     D[geneweaver-db]
     T[geneweaver-tools]
+    BA[geneweaver-boolean-algebra]
     A[geneweaver-core]
     E[geneweaver-testing]
     C[geneweaver-client]
-    E --> A & T & D --> G
+    T & E & A --> BA --> G
+    E --> A & D --> G
     E & A --> C
-    E --> G
-    
+    E --> G & T
+    A --> D
 ```
 
 The client consumes the ReST APIs provided by the GeneWeaver application. 

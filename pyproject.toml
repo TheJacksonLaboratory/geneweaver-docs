@@ -9,6 +9,7 @@ packages = []
 [tool.poetry.dependencies]
 python = "^3.9"
 mkdocs-material = "^9.0.13"
+mkdocs-jupyter = "^0.24.2"
 
 [build-system]
 requires = ["poetry-core"]
