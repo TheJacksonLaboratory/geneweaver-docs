@@ -1,0 +1,28 @@
+name: MkDocs Build
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # Set your Python version here
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python -
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Build MkDocs site
+      run: poetry run mkdocs build
