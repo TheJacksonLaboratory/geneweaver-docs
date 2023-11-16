@@ -1,4 +1,4 @@
-# GeneWaver Documentation
+# Geneweaver Documentation
 
 [![MkDocs Build](https://github.com/TheJacksonLaboratory/geneweaver-docs/actions/workflows/mkdocs_pr_check.yml/badge.svg?branch=main&event=push)](https://github.com/TheJacksonLaboratory/geneweaver-docs/actions/workflows/mkdocs_pr_check.yml)
 
