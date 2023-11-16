@@ -58,6 +58,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - mkdocs-jupyter:
+      include_source: True
 nav:
   - Home: index.md
   - Getting Started:
@@ -76,12 +79,14 @@ nav:
       - Package Based Architecture: concepts/package-based-architecture.md
   - Tutorial:
       - tutorial/index.md
-      - Accessing Geneweaver Data: tutorial/accessing-geneweaver-data.md
-      - Running a Local Database: tutorial/running-a-local-database.md
-      - Creating New Tools: tutorial/creating-new-tools.md
-      - Testing New Tools: tutorial/testing-new-tools.md
-      - Exploring Data in Javascript: tutorial/exploring-data-in-javascript.md
-      - Creating Documentation Sites: tutorial/creating-a-new-documentation-site.md
+      - NCI-60 Example Workflow: tutorial/nci_60_example_01.ipynb
+      - Download Genesets: tutorial/download_genesets.ipynb
+#      - Accessing Geneweaver Data: tutorial/accessing-geneweaver-data.md
+#      - Running a Local Database: tutorial/running-a-local-database.md
+#      - Creating New Tools: tutorial/creating-new-tools.md
+#      - Testing New Tools: tutorial/testing-new-tools.md
+#      - Exploring Data in Javascript: tutorial/exploring-data-in-javascript.md
+#      - Creating Documentation Sites: tutorial/creating-a-new-documentation-site.md
   - Reference:
       - reference/index.md
       - Available Packages: reference/available-packages.md
