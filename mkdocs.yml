@@ -81,7 +81,8 @@ nav:
       - tutorial/index.md
       - Client Login: tutorial/geneweaver_client_login.ipynb
       - NCI-60 Example Workflow: tutorial/nci_60_example_01.ipynb
-      - Download Genesets: tutorial/download_genesets.ipynb
+      - Download Geneset (CLI): tutorial/download_geneset_command_line.md
+#      - Download Genesets: tutorial/download_genesets.ipynb
 #      - Accessing Geneweaver Data: tutorial/accessing-geneweaver-data.md
 #      - Running a Local Database: tutorial/running-a-local-database.md
 #      - Creating New Tools: tutorial/creating-new-tools.md
