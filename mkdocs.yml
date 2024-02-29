@@ -81,7 +81,10 @@ nav:
       - tutorial/index.md
       - Client Login: tutorial/geneweaver_client_login.ipynb
       - NCI-60 Example Workflow: tutorial/nci_60_example_01.ipynb
-      - Download Genesets (CLI): tutorial/downloading_geneset_command_line.md
+#      - Geneweaver Command Line Interface:
+#          - tutorial/geneweaver_command_line.md
+#          - tutorial/geneweaver_command_line.md
+#      - Download Genesets (CLI): tutorial/downloading_geneset_command_line.md
 #      - Download Genesets: tutorial/download_genesets.ipynb
 #      - Accessing Geneweaver Data: tutorial/accessing-geneweaver-data.md
 #      - Running a Local Database: tutorial/running-a-local-database.md
@@ -91,12 +94,16 @@ nav:
 #      - Creating Documentation Sites: tutorial/creating-a-new-documentation-site.md
   - Reference:
       - reference/index.md
+      - gweave (Command Line):
+        - reference/command-line/index.md
+        - Logging In: reference/command-line/logging-in.md
+        - API Commands: reference/command-line/api-commands.md
+      - ReST API: reference/restful-api.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
-      - Scientific Workflows: reference/scientific-workflows.md
+#      - Scientific Workflows: reference/scientific-workflows.md
       - Data Model: reference/data-model.md
       - GeneSet Tiers: reference/geneset-tiers.md
       - Contributing Guide: reference/contributing-guide.md
       - Development Guide: reference/development-guide.md
-      - ReST API: reference/restful-api.md
       - Acknowledgements: reference/acknowledgements.md
