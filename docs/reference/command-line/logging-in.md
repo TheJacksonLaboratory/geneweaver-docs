@@ -18,9 +18,9 @@ To log in to the command line application, we will be using the `auth` command g
     If you are not familiar with command groups, see the documentation on `gweave`
     [Command Groups](/reference/command-line/#command-groups).
 
-### Fist Steps
+### First Steps
 
-If you have never logged in before, the first think you will need to do is use 
+If you have never logged in before, the first thing you will need to do is use 
 the `login` command.
 
 ```
@@ -31,6 +31,7 @@ This will prompt you to open a link in your web browser. Once you have opened th
 you will be prompted to log in to the GeneWeaver web application. Once you have logged 
 in, navigate back to the command line application to continue using the `gweave` tool.
 
+You will see the following message in your terminal:
 ```
 1. On your computer or mobile device navigate to:  https://geneweaver.auth0.com/activate?user_code=SOME-CODE
 2. Enter the following code:  SOME-CODE
@@ -39,8 +40,8 @@ in, navigate back to the command line application to continue using the `gweave`
 Note that the code may have been entered automatically for you, in which case you can
 continue through without entering the code.
 
-### Seeing you Tokens
-You should not need to see your tokens, but if you do, you can use the two tokens 
+### Viewing your Tokens
+You should not need to view your tokens, but if you do, you can use the two tokens 
 commands:
 ```
 gweaver beta auth print-access-token
