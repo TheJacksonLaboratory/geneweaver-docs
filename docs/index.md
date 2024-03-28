@@ -26,7 +26,7 @@
 
     [:octicons-arrow-right-24: Jump Into Using The Website](getting-started/web-application/)
 
-    [:octicons-arrow-right-24: Use The API](/geneweaver-docs/reference/api-standards/)
+    [:octicons-arrow-right-24: Use The API](reference/api-standards/)
 
     [:octicons-arrow-right-24: Build With Our Python Packages](reference/available-packages/)
 

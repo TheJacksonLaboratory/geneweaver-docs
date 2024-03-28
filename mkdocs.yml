@@ -120,13 +120,13 @@ nav:
       - ReST API: reference/restful-api.md
       - API Standards:
           - reference/api-standards/index.md
-          - HTTP Standards: reference/api-standards/http_standards.md
-          - DNS Naming: reference/api-standards/dns_naming.md
-          - ReSTful Endpoint Naming: reference/api-standards/restful_endpoint_naming.md
-          - OpenAPI Schemas: reference/api-standards/openapi_schemas.md
-          - API Versioning: reference/api-standards/api_versioning.md
-          - API Monitoring: reference/api-standards/api_monitoring.md
-          - Response Errors: reference/api-standards/error_handling.md
+          - HTTP Standards: reference/api-standards/http-standards.md
+          - DNS Naming: reference/api-standards/dns-naming.md
+          - ReSTful Endpoint Naming: reference/api-standards/restful-endpoint-naming.md
+          - Response Errors: reference/api-standards/error-handling.md
+          - OpenAPI Schemas: reference/api-standards/openapi-schemas.md
+          - API Versioning: reference/api-standards/api-versioning.md
+          - API Monitoring: reference/api-standards/api-monitoring.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
 #      - Scientific Workflows: reference/scientific-workflows.md
