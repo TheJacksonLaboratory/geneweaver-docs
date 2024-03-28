@@ -34,9 +34,5 @@ poetry install
 
 ## Usage
 
-!!! warning "Coming Soon"
-    [//]: # (TODO)
-    For now, please use the built-in help to learn about the command line interface.
-    ```
-    $ geneweaver --help    
-    ```
+!!! tip
+    Check out the command line interface [reference documentation.](/reference/command-line)

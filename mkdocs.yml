@@ -11,8 +11,6 @@ theme:
   palette:
     - scheme: geneweaver
       media: "(prefers-color-scheme: light)"
-#      primary: green
-#      accent: blue
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -38,19 +36,40 @@ theme:
     - content.tabs.link
 extra_css:
   - stylesheets/extra.css
-repo_name: bergsalex/geneweaver-docs
-repo_url: https://github.com/bergsalex/geneweaver-docs
+repo_name: TheJacksonLaboratory/geneweaver-docs
+repo_url: https://github.com/TheJacksonLaboratory/geneweaver-docs
 edit_uri: edit/main/docs/
 extra:
   generator: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver
+      name: GitHub Repositories
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/search/?q=geneweaver
+      name: Python Packages
+    - icon: material/web
+      link: https://geneweaver.org
+      name: Geneweaver Website
+    - icon: material/api
+      link: https://geneweaver.jax.org/api/docs
+      name: Geneweaver API
+copyright: These pages are maintained by the GeneWeaver team and the Chesler Lab at The Jackson Laboratory in Bar Harbor, Maine.
 markdown_extensions:
   - admonition
   - tables
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
   - pymdownx.superfences
+  - def_list
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
@@ -99,6 +118,15 @@ nav:
         - Logging In: reference/command-line/logging-in.md
         - API Commands: reference/command-line/api-commands.md
       - ReST API: reference/restful-api.md
+      - API Standards:
+          - reference/api-standards/index.md
+          - HTTP Standards: reference/api-standards/http_standards.md
+          - DNS Naming: reference/api-standards/dns_naming.md
+          - ReSTful Endpoint Naming: reference/api-standards/restful_endpoint_naming.md
+          - OpenAPI Schemas: reference/api-standards/openapi_schemas.md
+          - API Versioning: reference/api-standards/api_versioning.md
+          - API Monitoring: reference/api-standards/api_monitoring.md
+          - Response Errors: reference/api-standards/error_handling.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
 #      - Scientific Workflows: reference/scientific-workflows.md
@@ -106,4 +134,8 @@ nav:
       - GeneSet Tiers: reference/geneset-tiers.md
       - Contributing Guide: reference/contributing-guide.md
       - Development Guide: reference/development-guide.md
+      - External Data Sources: reference/external-data-sources.md
+      - Publications: reference/publications.md
+      - License: reference/license.md
+      - Policies: reference/policies.md
       - Acknowledgements: reference/acknowledgements.md
