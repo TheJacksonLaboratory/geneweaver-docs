@@ -24,11 +24,11 @@
 
     Architected to make it easy to get started, whichever way makes sense for you.
 
-    [:octicons-arrow-right-24: Jump Into Using The Website](/getting-started/web-application/)
+    [:octicons-arrow-right-24: Jump Into Using The Website](getting-started/web-application/)
 
-    [:octicons-arrow-right-24: Download the Geneweaver CLI](/reference/command-line/)
+    [:octicons-arrow-right-24: Use The API](/geneweaver-docs/reference/api-standards/)
 
-    [:octicons-arrow-right-24: Build With Our Python Packages](/reference/available-packages/)
+    [:octicons-arrow-right-24: Build With Our Python Packages](reference/available-packages/)
 
 -   :simple-jupyter:{ .lg .middle } __Example Workflows__
 
@@ -36,9 +36,9 @@
 
     Follow real examples of how GeneWeaver's tools will be used to do analysis.
 
-    [:octicons-arrow-right-24: NCI-60 Workflow](/tutorial/nci_60_example_01/)
+    [:octicons-arrow-right-24: NCI-60 Workflow](tutorial/nci_60_example_01/)
 
-    [:octicons-arrow-right-24: Authenticating With The Client Library](/tutorial/geneweaver_client_login/)
+    [:octicons-arrow-right-24: Authenticating With The Client Library](tutorial/geneweaver_client_login/)
 
 -   :material-api:{ .lg .middle } __API Standards__
 
@@ -46,7 +46,7 @@
 
     Developed to be consistent with our open API Standards.
 
-    [:octicons-arrow-right-24: Standards Documentation](/reference/api-standards/)
+    [:octicons-arrow-right-24: Standards Documentation](reference/api-standards/)
 
 -   :material-scale-balance:{ .lg .middle } __Open Source, Apache License 2.0__
 
