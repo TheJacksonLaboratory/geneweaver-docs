@@ -1,8 +1,7 @@
 # API Monitoring
 > These guiding principles will help stability, uptime, and awareness for your applications.
 
-Actuator endpoints let you monitor and interact with your application. For language
-specific tutorials (please see here)[/Development/Tutorials/Monitoring/endpoints]. 
+Actuator endpoints let you monitor and interact with your application. 
 
 ## Monitoring
 Our endpoints for monitoring and info will exist at 
@@ -28,8 +27,8 @@ Example Response:
 {"name":"Fancy Application","status":"UP","details":"Everything seems okay."}
 ````
 
-| Status Text      | Http Status Code                     |
-| ----------- | ------------------------------------ |
-| `UP`        |  200 |
-| `UNKNOWN`   |  200 |
-| `DOWN`      |  503 |
+| Status Text  | Http Status Code |
+|--------------|------------------|
+| `UP`         | 200              |
+| `UNKNOWN`    | 200              |
+| `DOWN`       | 503              |
