@@ -8,7 +8,7 @@ For more in-depth information about the concepts presented in this section, plea
 the [Concepts](../concepts/index.md) section and the [Reference](../reference/index.md)
 section.
 
-## User Specific Entrypoints
+## Quick Start
 If you're already familiar with Geneweaver, and just need to find content specific to
 your use-case, you can use the following links to jump to the appropriate documentation.
 If you find that you need more information, head back to this website and keep reading!

@@ -12,82 +12,88 @@
 **Web Application**: 
 [https://www.geneweaver.org](https://www.geneweaver.org)
 
-**Web Application Documentation**: 
-[https://geneweaver.org/help/](https://geneweaver.org/help/)
-
-**Project Documentation (this site)**: 
-[https://bergsalex.github.io/geneweaver-docs/](https://bergsalex.github.io/geneweaver-docs/)
+**API Documentation**:
+[https://geneweaver.jax.org/api/docs](https://geneweaver.jax.org/api/docs)
 ---
 
+<div class="grid cards" markdown>
 
-## Components of GeneWeaver
-GeneWeaver is two things: 
+-   :material-clock-fast:{ .lg .middle } __Get Going Quickly__
 
-1. A web application 🖥️, and 
-2. An ecosystem of software packages ⚙️.
+    ---
 
-**Genomics Researchers** will find the web application useful as a fully integrated 
-platform for the analysis of heterogeneous functional genomics data.
+    Architected to make it easy to get started, whichever way makes sense for you.
 
-**Educators**, **students** and **software developers** will find the ecosystem of 
-software packages useful for the development of new tools and applications.
+    [:octicons-arrow-right-24: Jump Into Using The Website](/getting-started/web-application/)
+
+    [:octicons-arrow-right-24: Download the Geneweaver CLI](/reference/command-line/)
+
+    [:octicons-arrow-right-24: Build With Our Python Packages](/reference/available-packages/)
+
+-   :simple-jupyter:{ .lg .middle } __Example Workflows__
+
+    ---
+
+    Follow real examples of how GeneWeaver's tools will be used to do analysis.
+
+    [:octicons-arrow-right-24: NCI-60 Workflow](/tutorial/nci_60_example_01/)
+
+    [:octicons-arrow-right-24: Authenticating With The Client Library](/tutorial/geneweaver_client_login/)
+
+-   :material-api:{ .lg .middle } __API Standards__
+
+    ---
+
+    Developed to be consistent with our open API Standards.
+
+    [:octicons-arrow-right-24: Standards Documentation](/reference/api-standards/)
+
+-   :material-scale-balance:{ .lg .middle } __Open Source, Apache License 2.0__
+
+    ---
+
+    GeneWeaver is open source and available on [GitHub](https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver).
+
+    [:octicons-arrow-right-24: License](https://github.com/TheJacksonLaboratory/geneweaver-docs/blob/main/LICENSE)
+
+</div>
+
+
+## What Is GeneWeaver?
+**[GeneWeaver](http://www.geneweaver.org)** is a web application for the integrated
+cross-species analysis of functional genomics data from heterogeneous sources. The
+application consists of a large database of gene sets curated from multiple public data
+resources and curated submissions, along with a suite of analysis tools designed to
+allow flexible, customized workflows through web-based interactive analysis or scripted
+API driven analysis. Gene sets come from multiple widely studied species and include
+ontology annotations, brain gene expression atlases, systems genetic study results, gene
+regulatory information, pathway databases, drug interaction databases and many other
+sources. Users can retrieve, store, analyze and share gene sets through a graded access
+system. Gene sets and analysis results can be stored, shared and compared privately,
+among user defined groups of investigators, and across all users. Analysis tools are
+based on combinatorics and statistical methods for comparing, contrasting and
+classifying gene sets based on their members.
+
+## What Is a Gene Set?
+Each **"gene set"** contains a list of genomic features, free text descriptive content,
+ontology annotations and gene association scores. Genomic features are mapped within and
+across multiple species. Currently, 10 species are supported, *Mus musculus, Homo
+sapiens, Rattus norvegicus, Danio rerio, Drosophilia melanogaster, Macaca mulatta,
+Caenorhabditis elegans, Saccharomyces cervisiae, Gallus gallus, Canis familiaris.*
+Additional species are added in response to community request.
+
+## What Can You Do With GeneWeaver?
+**[GeneWeaver](http://www.geneweaver.org)** allows users to integrate these diverse
+functional genomics data across species, tissue and experimental platform to address
+questions about the relations among genes and biological functions. Applications include
+the prioritization of gene-disease associations from multiple evidence sources, the
+classification and comparison of biological functions based on biological substrates,
+and the identification of similar genes based on function. Cross species analysis
+enables the discovery of conserved mechanisms of biological functions, and the discovery
+of divergent functions served by conserved biological mechanisms. 
 
 ## What is this Documentation?
-This documentation is intended to be the foundational documentation for the entire
-Geneweaver software ecosystem. It provides an introduction to the system and ways of
+This documentation provides an introduction to the system and ways of
 working with it, explanations of core concepts, tutorials of general utility,
 as well as detailed reference documentation for the various components and processes
 that make up the system.
-
-## GeneWeaver Use Cases
-Your entrypoint to GeneWeaver will depend on who you are, and what you would like to
-do with GeneWeaver. The following sections will help you find the right place to start
-depending on our best guess as to your goals, based on who you are. Ultimately, you
-will need to make your own decisions about what approach works best for you.
-
-=== "Researchers 🔬"
-    Geneweaver is a valuable resource for any genomics researchers looking to integrate and 
-    analyze complex datasets in order to gain new insights into biological processes and 
-    pathways.
-
-    Geneweaver allows researchers to easily compare and combine datasets from various 
-    sources and analyze the results in an interactive and user-friendly interface. The 
-    system includes a large collection of publicly available datasets, including gene 
-    expression data, protein-protein interactions, and gene ontology annotations, among 
-    others. Geneweaver is a valuable resource for researchers in the field of genomics and 
-    can be used to identify novel gene interactions and pathways, as well as to explore the 
-    functional relationships between genes and biological processes.
-=== "Educators & Students 📚"
-    For educators, GeneWeaver provides a comprehensive platform for integrating real world 
-    data and open sources software into the classroom. GeneWeaver provides data, tools, 
-    systems, and workflows that can be used to teach students about genomics, 
-    bioinformatics, computer science and data science. 
-
-    GeneWeaver allows students and educators to integrate with a full cycle of development 
-    and learning, starting with application to real-world concepts and data, and ending with
-    the development and contribution of new tools and applications.
-
-    The following disciplines might find GeneWeaver useful:
-
-    - **Computer Science**
-        - Algorithms
-        - Software Engineering
-        - Databases
-        - Data Science
-    - **Biology and Genomics**
-    - **Bioinformatics**
-    - **Mathematics**
-=== "Software Developers 💻"
-    For software developers, GeneWeaver provides a suite of open source software 
-    packages that can be used for the development of new tools and applications. 
-    GeneWeaver is built on a collection of open source software 
-    packages. A software developer could use all or some of that ecosystem to build new
-    applications and tools.
-
-    Software developers can leverage the ecosystem of open source Python packages used 
-    in Geneweaver.org through its package-based architecture to build new bioinformatics 
-    tools and applications, contribute to existing packages, integrate with other tools,
-    and address specific needs or gaps in the ecosystem.
-
-
-    
