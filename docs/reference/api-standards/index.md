@@ -8,11 +8,11 @@ standards for the development of APIs.
 
 The group is focused on exploring the following topics:
 
-* [x] [Standard HTTP Methods & Status Codes](/reference/api-standards/http_standards/)
-* [x] [Standard Naming of Endpoints](/reference/api-standards/restful_endpoint_naming/)
-* [x] [Standard Naming of Domain Names](/reference/api-standards/dns_naming/)
-* [x] Standard structure for response body
-    * [x] Define Scenarios and Categories of Response Errors
-* [x] [Standard for API Versioning and Deprecation](/reference/api-standards/api_versioning/)
-* [x] [OpenAPI Schemas](/reference/api-standards/openapi_schemas/) (FKA Swagger)
+* [x] [Standard HTTP Methods & Status Codes](http-standards/)
+* [x] [Standard Naming of Domain Names](dns-naming/)
+* [x] [Standard Naming of Endpoints](restful-endpoint-naming/)
+* [x] [Define Scenarios and Categories of Response Errors](error-handling/)
+* [x] [OpenAPI Schemas](openapi-schemas/) (FKA Swagger)
+* [x] [Standard for API Versioning and Deprecation](api-versioning/)
+* [x] [Standard for API Monitoring and Health](api-monitoring/)
 * [ ] Testing of all items listed above. 
