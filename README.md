@@ -1,6 +1,10 @@
 # Geneweaver Documentation
 
-[![MkDocs Build](https://github.com/TheJacksonLaboratory/geneweaver-docs/actions/workflows/mkdocs_pr_check.yml/badge.svg?branch=main&event=push)](https://github.com/TheJacksonLaboratory/geneweaver-docs/actions/workflows/mkdocs_pr_check.yml)
+[![Static Badge](https://img.shields.io/badge/license-apache--2.0-97CA00?style=for-the-badge)](https://github.com/TheJacksonLaboratory/geneweaver-docs/blob/main/LICENSE)
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TheJacksonLaboratory/geneweaver-docs/mkdocs_pr_check.yml?branch=main&event=push&style=for-the-badge&label=MkDocs%20Build)](https://github.com/TheJacksonLaboratory/geneweaver-docs/actions/workflows/mkdocs_pr_check.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fthejacksonlaboratory.github.io%2Fgeneweaver-docs%2F&up_message=AVAILABLE&style=for-the-badge&logo=materialformkdocs&label=Documentation)](https://thejacksonlaboratory.github.io/geneweaver-docs/)
 
 This repository contains the central documentation site for the GeneWeaver project.
 Geneweaver is a web-based software tool for the integration of functional genomics data.
