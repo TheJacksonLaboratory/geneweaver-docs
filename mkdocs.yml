@@ -99,6 +99,7 @@ nav:
   - Tutorial:
       - tutorial/index.md
       - Client Login: tutorial/geneweaver_client_login.ipynb
+      - Map Gene IDs: tutorial/map-gene-ids.ipynb
       - NCI-60 Example Workflow: tutorial/nci_60_example_01.ipynb
 #      - Geneweaver Command Line Interface:
 #          - tutorial/geneweaver_command_line.md
