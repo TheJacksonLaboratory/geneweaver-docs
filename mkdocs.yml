@@ -119,15 +119,6 @@ nav:
         - Logging In: reference/command-line/logging-in.md
         - API Commands: reference/command-line/api-commands.md
       - ReST API: reference/restful-api.md
-      - API Standards:
-          - reference/api-standards/index.md
-          - HTTP Standards: reference/api-standards/http-standards.md
-          - DNS Naming: reference/api-standards/dns-naming.md
-          - ReSTful Endpoint Naming: reference/api-standards/restful-endpoint-naming.md
-          - Response Errors: reference/api-standards/error-handling.md
-          - OpenAPI Schemas: reference/api-standards/openapi-schemas.md
-          - API Versioning: reference/api-standards/api-versioning.md
-          - API Monitoring: reference/api-standards/api-monitoring.md
       - Available Packages: reference/available-packages.md
       - Available Tools: reference/available-tools.md
 #      - Scientific Workflows: reference/scientific-workflows.md

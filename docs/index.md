@@ -1,7 +1,6 @@
 <a href="https://www.geneweaver.org">
     <h1 align="center">
-        <img src="https://geneweaver.org/static/images/GW2-logo.png" alt="GeneWeaver Logo" style="vertical-align: top">
-        GeneWeaver
+        <img src="assets/GW3-logo-2.png" alt="GeneWeaver Logo" style="vertical-align: top; max-width: 80%; ">
     </h1>
 </a>
 <p align="center">
@@ -38,15 +37,17 @@
 
     [:octicons-arrow-right-24: NCI-60 Workflow](tutorial/nci_60_example_01/)
 
+    [:octicons-arrow-right-24: Mapping Gene Identifiers](tutorial/map-gene-ids.ipynb)
+
     [:octicons-arrow-right-24: Authenticating With The Client Library](tutorial/geneweaver_client_login/)
 
 -   :material-api:{ .lg .middle } __API Standards__
 
     ---
 
-    Developed to be consistent with our open API Standards.
+    Developed to be consistent with The Jackson Laboratory's open source API Standards.
 
-    [:octicons-arrow-right-24: Standards Documentation](reference/api-standards/)
+    [:octicons-arrow-right-24: Standards Documentation](https://thejacksonlaboratory.github.io/api-standards/)
 
 -   :material-scale-balance:{ .lg .middle } __Open Source, Apache License 2.0__
 
