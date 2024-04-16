@@ -1,6 +1,6 @@
 <a href="https://www.geneweaver.org">
     <h1 align="center">
-        <img src="assets/GW3-logo-2.png" alt="GeneWeaver Logo" style="vertical-align: top; max-width: 80%; ">
+        <img src="assets/GW3-logo-2.png" alt="GeneWeaver Logo" style="vertical-align: top; max-width: 90%; ">
     </h1>
 </a>
 <p align="center">
@@ -56,6 +56,8 @@
     GeneWeaver is open source and available on [GitHub](https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver).
 
     [:octicons-arrow-right-24: License](https://github.com/TheJacksonLaboratory/geneweaver-docs/blob/main/LICENSE)
+
+    [:octicons-arrow-right-24: Our GitHub Repositories](https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver)
 
 </div>
 
