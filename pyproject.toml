@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "geneweaver-docs"
-version = "0.0.1a0"
+version = "0.0.2a0"
 description = ""
 authors = ["Alexander Berger <alexander.berger@jax.org>"]
 readme = "README.md"
