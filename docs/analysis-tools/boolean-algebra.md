@@ -1,7 +1,7 @@
 ## Boolean Algebra
 
 The Boolean Algebra Tool performs basic set operations on at least two Gene Sets.
-Results are displayed as lists of genes beloging to one of the three different types of
+Results are displayed as lists of genes belonging to one of the three different types of
 set operations: Union, Intersect, and Symmetric Difference. Furthermore, results allow
 users to quickly determine new relationships between Gene Sets and create a new Gene Set
 based on set-derived findings.
