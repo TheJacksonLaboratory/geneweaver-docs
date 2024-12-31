@@ -84,4 +84,4 @@ Length|23|N/A|13
 Width|21|22|14
 Depth|N/A|20|11
 
-_Figure 7_: In Pairwise Deletion, when comparing length, only Obj1 and Obj3 will be compared. When comparing width, all will be compared, and when comparing depth, only Obj2 and Obj3 can be looked at. This prevents missing data from being assigned a default value such as 0 in the system.
+_Figure 7_: In Pairwise Deletion, when comparing length, only Obj1 and Obj3 will be compared. When comparing width, all will be compared, and when comparing depth, only Obj2 and Obj3 will be compared. This prevents missing data from being assigned a default value such as 0 in the system.

@@ -21,7 +21,7 @@ Access the GeneSet Graph Tool through the [Analyze Genesets](index.md#analyze-ge
 To generate a GeneSet Graph, you must first select gene sets from a project. Projects may be created and updated by uploading GeneSets, searching the GeneWeaver database, or through the use of other tools in the GeneWeaver system. See the documentation for [uploading GeneSets](#uploading-gene-sets), [Search](#searching-geneweaver), or [Manage GeneSets](#gene-set-utilities) to learn more about these functions. To select an entire project or multiple projects for analysis, check the box next to the project name. To select individual GeneSets within a project, click on the **+** beside the project name and check individual GeneSets using the checkboxes. Next, click on the GeneSet Graph icon in the Analysis tools box to the left of the project list. (For users that want to change options, press the green **+** sign before they start the tool).
 
 ![](../assets/images/GeneSet_Graph_2.png "fig:GeneSet_Graph_2.png")
-_Figure 2_: GeneSet Graph Selectino Icon.
+_Figure 2_: GeneSet Graph Selection Icon.
 
 The GeneSet Graph can be interactively panned and zoomed with the mouse, and more details of each gene or GeneSet can be viewed by clicking on the individual nodes in the display. In addition to these interactive features, there are also a few options available to optimize the display.
 

@@ -9,13 +9,13 @@ The graph database is built off a fixed and reproducible set of data sourced mos
 
 Understanding the Find Variants Tool
 -----------------------------------------
-If the input to the tool is a list of human genes, the tool would find orthologoous genes in mice and variants of those mouse genes either through eQTL relationships or transcript relationships. The tool can also work from mouse genes to human variants.
+If the input to the tool is a list of human genes, the tool would find orthologous genes in mice and variants of those mouse genes either through eQTL relationships or transcript relationships. The tool can also work from mouse genes to human variants.
 
 ![](../assets/images/FindVariants_graph.png)
 
 _Figure 1_: Cut of the graph database to map the relationships from a set of human genes to mouse variants.
 
-The tool interacts with the a graph database built using information from AGR and Ensembl for information about genes and their orthologous relationships.
+The tool interacts with the graph database built using information from AGR and Ensembl for obtaining information about genes and their orthologous relationships.
 
 Using the Find Variants Tool
 ---------------------------------

@@ -132,7 +132,7 @@ The other visualization is a wire representation. This shows the
 connections between all genes in the same gene set. The color of each
 gene shows which cluster the gene is in. If a gene is grey, it is
 considered noise. Mousing over a circle will highlight it and show the
-gene ID. By clicking and and holding a gene, you can drag the gene
+gene ID. By clicking and holding a gene, you can drag the gene
 around the screen.
 
 >Note: This visualization will only be drawn with small data sets due to
@@ -195,7 +195,7 @@ Pseudocode](../assets/images/DBSCAN_Algorithm_Pseudocode.png "DBSCAN Pseudocode"
 
 Starting in the DBSCAN function, the cluster is first initialized to 0.
 Next, each point is visited only once. For this example, baz will be the
-first gene visited. baz will be first be marked as visited, then the
+first gene visited. baz will first be marked as visited, then the
 neighbors of baz will be found by regionQuery. The regionQuery function
 will return all points within radius epsilon, including the point
 itself. Calling regionQuery on baz with epsilon will return all genes
@@ -218,12 +218,12 @@ entering the expandCluster function, the point P will be added to the
 cluster. The cluster is currently \[baz\]. Next, the algorithm runs
 through all of the neighbors to see if the cluster can be expanded. The
 list of neighbor points is now \[baz, car, Prp31, Arr1\]. First baz is
-looked at, but because it has already been visited, it is not going to
+checked, but because it has already been visited, it is not going to
 be checked again. Next, car is checked. Car will then return a list of
 all its neighbors, which are \[car, baz, Prp31, Arr1\]. Then that list
 is checked against the number of minPoints. Since it is greater than or
 equal to minPoints, that list is added to the original list of
-neighbors. So the original neighbors list of \[baz, car, Prp31, Arr1\]
+neighbors. The original neighbors list of \[baz, car, Prp31, Arr1\]
 and the new neighbors list of \[car, baz, Prp31, Arr1\] are added
 together. However, the algorithm does not add duplicate genes to the
 list. Therefore, nothing is added to the list and the neighbors list is
@@ -232,14 +232,14 @@ cluster if it is not already part of a cluster. car is not a part of any
 other cluster so it is added to the current cluster. Now the cluster
 contains \[baz, car\].
 
-Next, Prp31 is looked at. Its neighbors are \[baz, car, Prp31, Arr1\].
+Next, Prp31 is checked. Its neighbors are \[baz, car, Prp31, Arr1\].
 This list is equal to minPoints, but once again, the list of Prp31's
-neighbors are already in the list of baz's neighbors. So nothing is
+neighbors are already in the list of baz's neighbors. Nothing is
 added to new neighbors, and since Prp31 is not a part of any other
 cluster, it is added to the current cluster, which is now \[baz, car,
 Prp31\].
 
-Now, Arr1 is looked at. Its neighbors are \[Arr1, baz, car, Prp31,
+Now, Arr1 is checked. Its neighbors are \[Arr1, baz, car, Prp31,
 veli\]. Notice that a new gene appeared in Arr1's neighbors (veli). This
 gene is now added to the list of baz's neighbors. Arr1 is added to the
 current cluster, so the cluster now holds \[baz, car, Prp31, Arr1\]. Now
@@ -268,7 +268,7 @@ noise.
 
 ![](../assets/images/NewSlide25.jpg "NewSlide25.jpg")
 
-However, just because a gene is marked is noise, does not guarantee it
+However, just because a gene is marked as noise, does not guarantee it
 is noise when the algorithm is finished. Later in the algorithm, it can
 be added to a cluster.
 

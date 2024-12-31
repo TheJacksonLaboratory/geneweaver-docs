@@ -169,7 +169,7 @@ all the genesets compared to each other.
 
 -   **Algorithm**
     -   Each gene set is initialized as its own cluster.
-    -   The similarity scores off all the genesets compared to each
+    -   The similarity scores of all the genesets compared to each
         other are saved in a matrix
     -   While we still have clusters that are similar:
         -   Determine which two clusters to join:
@@ -196,7 +196,7 @@ all the genesets compared to each other.
 
 -   **Algorithm**
     -   Each gene set is initialized as its own cluster.
-    -   The similarity scores off all the genesets compared to each
+    -   The similarity scores of all the genesets compared to each
         other are saved in a matrix
     -   While we still have clusters that are similar:
         -   Determine which two clusters to join:
@@ -223,7 +223,7 @@ all the genesets compared to each other.
 
 -   **Algorithm**
     -   Each gene set is initialized as its own cluster.
-    -   The similarity scores off all the genesets compared to each
+    -   The similarity scores of all the genesets compared to each
         other are saved in a matrix
     -   While we still have clusters that are similar:
         -   Determine which two clusters to join:

@@ -2,7 +2,7 @@
 
 5 api endpoints are created for the following 5 pipelines: eggo, eggv, eggr, eggix, and eggin. Each pipeline has a get endpoint to retrieve the information from running each entire pipeline. 
  
-The pipeline can be found on Swagger UI through running Geneweaver on Watson and use this link: http://localhost:8889/api/
+The pipeline can be found on Swagger UI through running Geneweaver on Watson and using this link: http://localhost:8889/api/
 
 Each api will load a default configuration file in yaml format. The suggested configuration information is the following:
 

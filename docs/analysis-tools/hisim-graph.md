@@ -21,8 +21,8 @@ Understanding the Results of the HiSim Graph
 --------------------------------------------
 
 It's best to use the HiSim Graph Tool with knowledge on what set intersections are: If
-GeneSet A contains Gene A, Gene B, and Gene C, and also GeneSet B contains Gene A, Gene
-B, and Gene D. Then the intersection of GeneSet A and GeneSet B will contain Gene A and
+GeneSet A contains Gene A, Gene B, and Gene C, and GeneSet B contains Gene A, Gene
+B, and Gene D; then the intersection of GeneSet A and GeneSet B will contain Gene A and
 Gene B, because an intersection of sets are whatever is contained in all sets
 intersected.
 
@@ -185,14 +185,14 @@ scores is used to assign an overall tree aggregation probability:
 
 ![](../assets/images/Phenome_Map_14.png "fig:Phenome_Map_14.png")
 
-_Figure 12_: Aggregation is another measure of accuracy that balances with parsimony in
+_Figure 12_: Aggregation is another measure of accuracy that balances with parsimony. In
 this tool, neither are ever fully accurate alone, but together they are more fine-tuned.
 
 ### Permutation Time Limit
 
 The maximum amount of time to spend doing permutations. For example,
 if [Permutations](#permutations) is set to 100,000 and this value is 5 minutes, the
-result with either have 100,000 permutations (if they finished within 5 minutes), or
+result will either have 100,000 permutations (if they finished within 5 minutes), or
 will be truncated to the number of permutations which were able to finish within 5
 minutes. The more time you give to Permutation Time Limit, the more accurate your
 results will be.
