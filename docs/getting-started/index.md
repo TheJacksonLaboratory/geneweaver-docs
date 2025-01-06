@@ -4,11 +4,27 @@ and concise introduction to the Geneweaver ecosystem. No matter who you are, thi
 section will help you quickly get up and running with basic features and functionalities
 in Geneweaver.
 
+## Quick Start
+-   The **[Quick Start Guide](../assets/GeneWeaverquickstart2018.pdf){:download="GeneWeaverQuickStart.pdf"}** is designed to help get new users up and running 
+quickly with a basic two page GeneWeaver Guide.
+-   The **[GeneWeaver Tutorial](../assets/gw-tutorial.pptx){:download="GeneWeaverTutorial.pptx"}** provides a guided tutorial exercise to get you 
+familiar with using and interpreting basic GeneWeaver analyses and tools through applied
+examples. The exercise is suitable for use in demonstrations, workshops and courses.
+
+* For more details on **how to get started** by searching for some specific genes of
+  interest and analyzing them, read the **[General Search](#general-search)** section.
+
+- To learn more about how to work with other researchers and their data within
+  GeneWeaver check out **[Users and Groups](#users-and-groups)**.
+- **[GeneWeaver Movie](https://www.youtube.com/watch?v=6mggK6tsEBo)** provides video
+  clips featuring examples of the use of GeneWeaver tools.
+- **[FAQ](#faq)**
+
 For more in-depth information about the concepts presented in this section, please see
 the [Concepts](../concepts/index.md) section and the [Reference](../reference/index.md)
 section.
 
-## Quick Start
+## Contextual Quick Start
 If you're already familiar with Geneweaver, and just need to find content specific to
 your use-case, you can use the following links to jump to the appropriate documentation.
 If you find that you need more information, head back to this website and keep reading!
