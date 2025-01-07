@@ -1,0 +1,2306 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../curation-standards/">
+      
+      
+        <link rel="next" href="../general-definitions/">
+      
+      
+      <link rel="icon" href="../../../assets/GW2-logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Process - GeneWeaver</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="geneweaver" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curation-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="GeneWeaver" class="md-header__button md-logo" aria-label="GeneWeaver" data-md-component="logo">
+      
+  <img src="../../../assets/GW2-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GeneWeaver
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="geneweaver" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TheJacksonLaboratory/geneweaver-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheJacksonLaboratory/geneweaver-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="GeneWeaver" class="md-nav__button md-logo" aria-label="GeneWeaver" data-md-component="logo">
+      
+  <img src="../../../assets/GW2-logo.png" alt="logo">
+
+    </a>
+    GeneWeaver
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TheJacksonLaboratory/geneweaver-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheJacksonLaboratory/geneweaver-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/foundational-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundational Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/web-application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/command-line-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Line Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/running-tools-locally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tools Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../concepts/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/genes-and-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Genes and GeneSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/geneweaver-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Source Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/geneweaver-data-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geneweaver Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/package-based-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Package Based Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../web-application/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web Application
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/user-registration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Registration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/uploading-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uploading GeneSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/batch-upload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Upload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/view-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View Genesets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/users-and-groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users and Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web-application/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/geneweaver_client_login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client Login
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/map-gene-ids/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map Gene IDs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/finding-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finding Genesets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial/nci_60_example_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NCI-60 Example Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../analysis-tools/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Analysis Tools
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Analysis Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/hisim-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HiSim Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/geneset-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/jaccard-similarity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jaccard Similarity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/clustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/dbscan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DBSCAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/mset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MSET
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/abba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ABBA Gene Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/boolean-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boolean Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis-tools/find-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Find Variants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../command-line/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    gweave (Command Line)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            gweave (Command Line)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command-line/logging-in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command-line/api-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geneset-tiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Tiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geneset-utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Curation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Curation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curation-standards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Process
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#curation-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curation Page
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general-definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geneset-type-standards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../restful-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../available-packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../external-data-sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Data Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#curation-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curation Page
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="curation-guide"><strong>Curation Guide</strong></h1>
+<p>The Curation menu in GeneWeaver provides options for managing curation tasks and
+searching and assigning publications</p>
+<p><img alt="" src="../../../assets/images/Image001.png" /></p>
+<p><strong>Managing Curation Tasks</strong></p>
+<p><img alt="" src="../../../assets/images/Image002.png" /></p>
+<p>When selecting “Manage Curation Tasks” from the navigation menu you’ll be presented with
+a page containing in the side bar, all of the curation groups you belong to separated by
+groups you administer and groups of
+which you are just a member. The main body of the page will contain the list of curation
+tasks for the selected group in the side bar. The curation tasks are a mix of
+publications and genesets, which have been assigned
+to this group, with the tasks, which have not yet been assigned to a curator, appearing
+at the top of the table.</p>
+<p><img alt="" src="../../../assets/images/Image004.png" /></p>
+<p>You can change the selected group in the main part of the page just by clicking on the
+group of interest in the side bar.</p>
+<p>Immediately above the table, there are buttons which will allow you to filter the
+contents of the table to contain: <strong>All</strong> results, <strong>Assigned</strong> tasks, <strong>Unassigned</strong>
+tasks, tasks which are <strong>Ready</strong> for
+review and tasks which have been <strong>Reviewed</strong>. In this context <em>Assigned</em> and
+<em>Unassigned</em> are referring to curator assignment.</p>
+<p><img alt="" src="../../../assets/images/Image006.png" /></p>
+<p>The columns of the table are mostly self-explanatory, however it’s worth explaining PUB
+ASSIGNMENT and # GENESETS.</p>
+<p>The PUB ASSIGNMENT column will display the associated PubMed ID for a geneset task, when
+it was entered via an association when a <strong>Publication Assignment</strong>. The link on the
+PubMed ID will take you to the publication assignments page.</p>
+<p>The # GENESETS column indicates for a publication, how many genesets are associated
+with it as part of this specific publication assignment. If this publication is assigned
+to another curation group as well, genesets as part of that publication Assignment will
+not be part of this number.</p>
+<p>If you are an administrator of the curation group for which you are
+managing tasks, there should also be an <strong>Assign Curator</strong> button at the top right of
+the page. You are able to select one or more task rows in the table, at which point they
+should be highlighted yellow.</p>
+<p><img alt="" src="../../../assets/images/Image008.png" /></p>
+<p>One note about how row selection works: There are no <em><strong>Shift</strong></em> or
+<em><strong>Control</strong></em> operations for selecting multiple rows. Rows are selected one at a time,
+and remain selected until you click on the row again, when it becomes deselected. Also,
+selections do not persist when you move to the next page of results. This latter issue
+is something we intend to address in a future release. However, for the time being it’s
+recommended you select the visible rows you would like to assign, assign them, and then
+move onto the next page of results.</p>
+<p>Once you’ve chosen the tasks you want to assign (or reassign), you will select the
+Assign Curator button.</p>
+<p><img alt="" src="../../../assets/images/Image010.png" /></p>
+<p>You will then be presented with a modal dialog box, where you can select the individual
+you wish to curate the tasks, and include a note regarding the curation assignment.</p>
+<p>Once a curator has been selected, click the <strong>Assign For Curation</strong>
+button. If you select <strong>Close</strong> instead no assignment will be made.</p>
+<p>For your convenience, if you realized while in the Curation Task
+Management page that you want to assign a publication to this group, so that you can
+subsequently assign it to a curator, there is also an <em><strong>Add Publication</strong></em> button at
+the top of the page.</p>
+<p><img alt="" src="../../../assets/images/Image006.png" /></p>
+<p>This button will take you to the <strong>Search/Assign Publications</strong> page with only
+publication generators listed that were created for the curation group.</p>
+<p><img alt="" src="../../../assets/images/Image014.png" /></p>
+<p><strong>Search/Assign Publications</strong></p>
+<p><img alt="" src="../../../assets/images/Image003.png" /></p>
+<p>When selecting “Search/Assign Publications” from the page menu you’ll be presented with
+a page containing an “accordion” display, with the middle section opened by default. The
+assumption is that most times the user will be interested in generating a list of
+publications from which to make assignments.</p>
+<p><img alt="" src="../../../assets/images/Image017.png" /></p>
+<p>The section is broken into 3 parts:</p>
+<ol>
+<li>Single Publication Assignment</li>
+<li>Publication Generators</li>
+<li>Generated Publication Listing</li>
+</ol>
+<p><strong>Single Publication Assignment</strong></p>
+<p>If you select the <strong>+</strong> symbol next to <em>Single Publication Assignment</em> you will be
+presented with a simple search box. This would be used in the case where you have a
+specific PubMed ID that you know and want to assign for curation. You simply enter the
+PubMed ID and select the <strong>Find Publication</strong> button.</p>
+<p><img alt="" src="../../../assets/images/Image019.png" /></p>
+<p>Assuming you’ve entered a valid PubMed ID, the citation will be returned so that you can
+confirm that this is indeed your publication of interest.</p>
+<p><img alt="" src="../../../assets/images/Image021.png" /></p>
+<p>To assign the publication to a curation group to work on, just select the Assign To
+Curation Group button and you will be presented with the following modal dialog box
+displaying a drop down so you can select the curation group and a text box so that you
+can enter any curation notes you might have.</p>
+<p><img alt="" src="../../../assets/images/Image023.png" /></p>
+<p><strong>Publication Generation</strong></p>
+<p>If you select the <strong>+</strong> symbol next to <em>Publication Generators</em> you
+will be presented with a table of generators that have been created for groups of which
+you are a member, and an <strong>Add Generator</strong> button.</p>
+<p><img alt="" src="../../../assets/images/Image017.png" /></p>
+<p>The columns of the table represent: the NAME that was assigned to the generator when it
+was queried; the PUBMED SEARCH term that is used to search PubMed and bring back a list
+of publications; FOR GROUP which is the curation group for which the generator was
+created; the date the generator was LAST RUN; and a series of ACTIONS which can be
+executed on a generator (will discuss these later).</p>
+<p>In the case where there are no generators already created for any of the groups to which
+you belong, the first step would be to click <strong>Add Generator</strong>. This will bring up a
+modal dialog box</p>
+<p><img alt="" src="../../../assets/images/Image027.png" /></p>
+<p>You will be presented with three fields, which are all mandatory in
+order to have the <strong>Save</strong> button enabled. Generator Name is a self
+selected name to represent your generator. PubMed Query must be a valid PubMed search
+term. You can learn more about valid PubMed terms using the following YouTube video
+(<a href="https://www.youtube.com/watch?v=dncRQ1cobdc&amp;feature=relmfu"><a href="https://www.youtube.com/watch?v=dncRQ1cobdc&amp;feature=relmfu">https://www.youtube.com/watch?v=dncRQ1cobdc&amp;feature=relmfu</a></a>).
+There is also a link to the PubMed search string builder
+(<a href="https://www.ncbi.nlm.nih.gov/pubmed/advanced"><a href="https://www.ncbi.nlm.nih.gov/pubmed/advanced">https://www.ncbi.nlm.nih.gov/pubmed/advanced</a></a>)
+directly in the dialog box.</p>
+<p><img alt="" src="../../../assets/images/Image029.png" /></p>
+<p>Once created the generator becomes available in the table of generators.</p>
+<p><strong>Generator Actions</strong></p>
+<p>There are three actions available to be used with generators:</p>
+<ul>
+<li><img alt="" src="../../../assets/images/Image031.png" /> Run</li>
+<li><img alt="" src="../../../assets/images/Image033.png" /> Edit</li>
+<li><img alt="" src="../../../assets/images/Image035.png" /> Delete</li>
+</ul>
+<p>We’ll discuss Run last as it’s most involved and leads to the next
+section.</p>
+<p><img alt="" src="../../../assets/images/Image033.png" />Edit is fairly straight forward. It presents you
+with a modal dialog identical to the one you get when creating a new generator. You are
+able to update any of name, search term or group association.</p>
+<p><img alt="" src="../../../assets/images/Image035.png" /> Delete will simply bring up a confirmation dialog
+box.</p>
+<p><img alt="" src="../../../assets/images/Image041.png" /></p>
+<p><img alt="" src="../../../assets/images/Image031.png" /> Lastly the Run option will cause the generator to
+run against PubMed, automatically collapse the <strong>Publication Generators</strong> accordion
+section and will expand the <strong>Generated Publication Listing</strong> section, with the results
+of the generator displayed.</p>
+<p><strong>Generated Publication Listing</strong></p>
+<p>If you select the <strong>+</strong> symbol next to <em>Generated Publication Listing</em> you will be
+presented with a table of publications that have been pulled from PubMed and are the
+result of the PubMed search term associated with a given generator. This section is
+populated by selecting the Run <img alt="" src="../../../assets/images/Image031.png" /> icon in the
+generator table.</p>
+<p><img alt="" src="../../../assets/images/Image047.png" /></p>
+<p>Publications that are pulled by a publication generator are not
+persisted in the GeneWeaver database. At least, not until the time they are assigned to
+a curation group. Instead the publications that are not already assigned to a group are
+pulled directly from PubMed at the time of generation. Some of these queries can result
+in a very large number of publications (hundreds of thousands). Therefore we only
+display a slice of the publications at a time. We do keep track of the total number that
+match the search term, and allow you to page through the results, each time going back
+out to PubMed to pull in the next set.</p>
+<p>Similar to the Curation Task Management page, you can select multiple rows to be
+assigned to a curation group all at once. This is done by individually selecting each
+publication of interest. There are no features for multi select all at once using either
+the control or shift keys. The only way you can de-select a row, is by clicking the row
+again.</p>
+<p>You can get more detail about a publication by clicking the <strong>+</strong> symbol at the
+beginning of the row. This will display the title, authors, journal and publication
+date, a link to the full text of the publication and the abstract.</p>
+<p><img alt="" src="../../../assets/images/Image049.png" /></p>
+<p>Once you’ve selected the publication or publications that you would like to assign to a
+curation group, you select the <strong>Assign to Curation Group</strong> button. This will bring up a
+modal dialog box where you will select a curation group, and optionally type in a note
+regarding the curation that is to be done.</p>
+<p><img alt="" src="../../../assets/images/Image051.png" /></p>
+<p>Once assigned the publications that have been assigned to a curation group should now
+have a View icon appearing at the end of the row, and if you cursor over the icon you
+will see a tool tip telling you what group or groups are curating this publication.</p>
+<p><img alt="" src="../../../assets/images/Image053.png" /></p>
+<p>Also, if you select the <strong>+</strong> symbol at the beginning of the row now, the groups will be
+listed under <strong>Assigned to Curation Groups</strong> under the expanded details.</p>
+<p>Once an assignment has been done a notification will be sent to the
+administrator of the curation group so they know that there is a new publication that
+needs to be assigned to a curator. Notifications will be discussed in another section.
+If you now return the the <strong>Manage Curation Tasks</strong> page for the curation group to which
+the publication has been assigned, you should now see the publication listed at the top
+of the tasks table.</p>
+<p><img alt="" src="../../../assets/images/Image055.png" /></p>
+<p><strong>Publication Curation Assignment</strong></p>
+<p>You can get to the <em><strong>Publication Curation Assignment</strong></em> page from the <strong>Curation Task
+Management</strong> page in one of two ways.</p>
+<ul>
+<li>Click on the PubMed ID in the TASK column of a publication row of the task table.</li>
+<li>Click on the PubMed ID in the PUB ASSIGNMENT column of a geneset row of the task
+  table.</li>
+</ul>
+<p><img alt="" src="../../../assets/images/Image057.png" /></p>
+<p>If you select a publication that has not been assigned to a curator yet, you’ll get to a
+page that looks something like this:</p>
+<p><img alt="" src="../../../assets/images/Image058.png" /></p>
+<p>The citation information is present, and the curation group is
+identified, but there is no curator assigned and no associated genesets.</p>
+<p>Assignment to a curator could have been done via the <strong>Curation Task Management</strong> page
+as detailed previously, or by using the <strong>Assign To Curator</strong> button on this page. The
+functionality of that button is essentially the same as on the other page, with an
+option to select a curator, and include a curation note.</p>
+<p>Once the curator is assigned, the curator’s name and any notes that have been entered
+will appear in the upper right hand side of the page.</p>
+<p><img alt="" src="../../../assets/images/Image060.png" /></p>
+<p>As the assignee of a publication, you will be presented with an
+additional button below <strong>Save Notes</strong> to be used to <strong>Create New
+Geneset</strong>. The <strong>Reassign</strong> button that was visible to the administrator now becomes a *
+<em>Mark as Complete</em>* button.</p>
+<p><img alt="" src="../../../assets/images/Image062.png" /></p>
+<p>Clicking on the Create New Geneset button brings up a dialog that allows you to enter a
+“stub” for one or more new genesets. A stub is essentially a placeholder for a geneset
+that will be more completely populated at a later time. This gives a curator the ability
+to quickly create a bunch of stubs while reviewing an article without having to enter
+the full information for each.</p>
+<p><img alt="" src="../../../assets/images/Image064.png" /></p>
+<p>The curator can select the species of interest and then just enter the name, the label
+to be used in figures and a description. They can add multiple for this species by
+selecting <strong>Add Row</strong>, and when they’ve entered the information for all the geneset
+stubs associated with this species, they hit <strong>Submit</strong>.</p>
+<p>When you’ve hit Submit, some automatic annotation of the geneset happens in the
+background. Your geneset stub will not immediately become visible under <strong>GeneSets
+Created For This Assignment</strong>. Instead you will see “loading…”. Once the geneset stubs
+are created the page will display the new geneset stubs.</p>
+<p><img alt="" src="../../../assets/images/Image066.png" /></p>
+<p>Once it’s loaded the geneset stub will appear under <strong>GeneSets Created For This
+Assignment</strong>. It might take a while for the new geneset stub(s) to appear in the list of
+genesets associated with the publication assignment, since GeneWeaver is calling out to
+an external text annotator to annotate the geneset description and publication abstract.</p>
+<p>If there are other genesets visible to the user that are associated with this
+publication, but were not created through this publication assignment, then they will
+show up under <strong>Other Visible GeneSets Associated With This Publication</strong>.</p>
+<p><img alt="" src="../../../assets/images/Image068.png" /></p>
+<p>Once the geneset stubs have been created, the curator can click on the link for any one
+of the genesets, and begin curation of an actual geneset.</p>
+<p>When curation of all of the associated genesets for this publication are complete, the
+curator should click the <strong>Mark as Complete</strong> button on the <strong>Publication Curation
+Assignment</strong> page.</p>
+<h4 id="curation-page">Curation Page</h4>
+<p>The geneset curation page is essentially the standard <em><strong>view geneset details</strong></em> page
+with some of the features turned off. On this page the curator can add or remove genes
+from the geneset, set a threshold, edit meta content, or update the curation notes. Once
+the curator has finished editing the geneset they can mark is <strong>Ready for Review</strong>,
+which will send the geneset back to the group administrator for review. If the group has
+multiple administrators then the geneset will be sent to the administrator that assigned
+the curation task to the curator.</p>
+<p><img alt="" src="../../../assets/images/Curate_geneset.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../curation-standards/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Standards">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Standards
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../general-definitions/" class="md-footer__link md-footer__link--next" aria-label="Next: Definitions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Definitions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      These pages are maintained by the GeneWeaver team and the Chesler Lab at The Jackson Laboratory in Bar Harbor, Maine.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver" target="_blank" rel="noopener" title="GitHub Repositories" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://pypi.org/search/?q=geneweaver" target="_blank" rel="noopener" title="Python Packages" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://geneweaver.org" target="_blank" rel="noopener" title="Geneweaver Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://geneweaver.jax.org/api/docs" target="_blank" rel="noopener" title="Geneweaver API" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

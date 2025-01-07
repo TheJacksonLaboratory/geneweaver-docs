@@ -1,0 +1,2699 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../clustering/">
+      
+      
+        <link rel="next" href="../mset/">
+      
+      
+      <link rel="icon" href="../../assets/GW2-logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>DBSCAN - GeneWeaver</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="geneweaver" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dbscan-gene-clustering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GeneWeaver" class="md-header__button md-logo" aria-label="GeneWeaver" data-md-component="logo">
+      
+  <img src="../../assets/GW2-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GeneWeaver
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DBSCAN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="geneweaver" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TheJacksonLaboratory/geneweaver-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheJacksonLaboratory/geneweaver-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GeneWeaver" class="md-nav__button md-logo" aria-label="GeneWeaver" data-md-component="logo">
+      
+  <img src="../../assets/GW2-logo.png" alt="logo">
+
+    </a>
+    GeneWeaver
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TheJacksonLaboratory/geneweaver-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheJacksonLaboratory/geneweaver-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/foundational-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundational Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/web-application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/command-line-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Line Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/running-tools-locally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tools Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/genes-and-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Genes and GeneSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/geneweaver-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Source Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/geneweaver-data-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geneweaver Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/package-based-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Package Based Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../web-application/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web Application
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/user-registration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Registration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/uploading-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uploading GeneSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/batch-upload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Upload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/view-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View Genesets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/users-and-groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users and Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-application/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/geneweaver_client_login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client Login
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/map-gene-ids/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map Gene IDs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/finding-genesets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finding Genesets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/nci_60_example_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NCI-60 Example Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Analysis Tools
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Analysis Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hisim-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HiSim Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geneset-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jaccard-similarity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jaccard Similarity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DBSCAN
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    DBSCAN
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DBSCAN?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is DBSCAN?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-the-dbscan-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use the DBSCAN Tool?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbscan-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBSCAN Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DBSCAN Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-epsilon-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Epsilon Parameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-minpoints-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The minPoints Parameter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dbscan-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DBSCAN Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The DBSCAN Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-times-of-dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Times of DBSCAN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wires
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-gene-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster / Gene Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbscan-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBSCAN Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DBSCAN Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-shortest-paths-between-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Shortest Paths Between Genes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-dbscan-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the DBSCAN Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MSET
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ABBA Gene Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boolean-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boolean Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Find Variants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/command-line/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    gweave (Command Line)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            gweave (Command Line)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/command-line/logging-in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/command-line/api-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/geneset-tiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Tiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/geneset-utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/curation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Curation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Curation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/curation/curation-standards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/curation/curation-process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/curation/general-definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/curation/geneset-type-standards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GeneSet Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/restful-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/available-packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/data-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/contributing-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/development-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/external-data-sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Data Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DBSCAN?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is DBSCAN?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-the-dbscan-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use the DBSCAN Tool?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbscan-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBSCAN Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DBSCAN Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-epsilon-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Epsilon Parameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-minpoints-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The minPoints Parameter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dbscan-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DBSCAN Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The DBSCAN Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-times-of-dbscan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Times of DBSCAN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wires
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-gene-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster / Gene Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbscan-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBSCAN Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DBSCAN Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-shortest-paths-between-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Shortest Paths Between Genes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-dbscan-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the DBSCAN Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="dbscan-gene-clustering"><strong>DBSCAN Gene Clustering</strong></h1>
+<h2 id="what-is-dbscan">What is DBSCAN?</h2>
+<p>DBSCAN (Density-Based Spatial Clustering of Application with Noise) is a clustering algorithm that groups genes into clusters based on how closely related the genes are.</p>
+<h3 id="why-use-the-dbscan-tool">Why Use the DBSCAN Tool?</h3>
+<p>In general, clustering is used to find patterns or outliers within data sets. In this implementation of DBSCAN, genes in the same cluster would be considered similar, while genes in different clusters would be less similar. An explanation of DBSCAN can be found <a href="https://en.wikipedia.org/wiki/DBSCAN">here</a>. Within Geneweaver, this tool can be used to infer relationships between genes. For example, if clusters with similar genes continue to appear in tests across multiple data sets, one could say that these genes are closely related.</p>
+<h2 id="dbscan-parameters">DBSCAN Parameters</h2>
+<p>DBSCAN takes in 2 parameters, epsilon and minPoints.</p>
+<h3 id="the-epsilon-parameter">The Epsilon Parameter</h3>
+<p>Epsilon determines how close the genes need to be in order to be
+considered in the same cluster. For example, an epsilon of 1 means that
+genes need to share at least 1 gene set. Another way of describing
+epsilon would be the "radius of the neighborhood". A larger epsilon will
+have a farther reach when finding clusters.</p>
+<h3 id="the-minpoints-parameter">The minPoints Parameter</h3>
+<p>The minPoints parameter determines the minimum number of points required
+to form a cluster. A cluster can have more than the minPoints number of
+genes, but cannot be less than minPoints. If a cluster has less than
+minPoints number of genes, it is considered noise.</p>
+<h2 id="the-dbscan-algorithm">The DBSCAN Algorithm</h2>
+<p>Before the DBSCAN algorithm executes, it must determine how closely
+related each gene is to the other genes. A bipartite graph is used to
+show how the genes connect to each gene set. First, all closest paths
+between genes are found. Following that, the DBSCAN algorithm is run.
+You can find an example of DBSCAN <a href="#dbscan-example">here</a>.</p>
+<h3 id="run-times-of-dbscan">Run Times of DBSCAN</h3>
+<p>On average, the worst-case time complexity of DBSCAN is O(n^2^).
+However, due to the sheer variability of data sets and epsilon and
+minPoints combinations, it is difficult to accurately predict the run
+time of this implementation. There are some factors that will typically
+increase the run time. These include:</p>
+<ul>
+<li>Number of Genes: If more genes are tested, the run time is longer</li>
+<li>Epsilon Value: A larger epsilon will typically give a longer run
+    time</li>
+<li>The size of gene sets: Gene sets with more genes in them will take
+    longer to explore</li>
+<li>The density of genes: If the data set is denser (more connections),
+    the run time is longer</li>
+</ul>
+<blockquote>
+<p>Note: Even if no clusters are found, the algorithm may still take time
+to execute.</p>
+</blockquote>
+<p>Below is a graph that shows the run times of the algorithm. The red line
+shows the run time if all genes are in the same gene set. The blue line
+shows the genes divided into 10 gene sets, with no overlap. The green
+line is similar to the blue line, but here the gene sets share one gene
+in common with one other gene set. This results in one giant cluster
+with all of the genes.</p>
+<blockquote>
+<p>Note: Since the blue line and green line overlap, you may not be
+    able to see the blue line.</p>
+</blockquote>
+<p><img alt="" src="../../assets/images/Run_Times_Graph.jpg" title="Run_Times_Graph.jpg" /></p>
+<p>Below is a table that estimates the run time of the red, blue, and green
+cases based on number of genes. Note that run times will change based on
+density of the gene sets and epsilon.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Number of Genes</th>
+<th align="center">1 Gene Set</th>
+<th align="center">10 Gene Sets, No Overlap</th>
+<th align="center">10 Gene Sets, Overlap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">100</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">200</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">500</td>
+<td align="center">5</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">1,000</td>
+<td align="center">10</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">1,500</td>
+<td align="center">12</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">2,000</td>
+<td align="center">15</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">2,500</td>
+<td align="center">28</td>
+<td align="center">5</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">3,000</td>
+<td align="center">63</td>
+<td align="center">8</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">3,500</td>
+<td align="center">110</td>
+<td align="center">12</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">4,000</td>
+<td align="center">160</td>
+<td align="center">17</td>
+<td align="center">18</td>
+</tr>
+<tr>
+<td align="center">4,500</td>
+<td align="center">230</td>
+<td align="center">24</td>
+<td align="center">25</td>
+</tr>
+<tr>
+<td align="center">5,000</td>
+<td align="center">306</td>
+<td align="center">32</td>
+<td align="center">33</td>
+</tr>
+<tr>
+<td align="center">6,000</td>
+<td align="center">487</td>
+<td align="center">50</td>
+<td align="center">51</td>
+</tr>
+<tr>
+<td align="center">7,000</td>
+<td align="center">708</td>
+<td align="center">72</td>
+<td align="center">75</td>
+</tr>
+<tr>
+<td align="center">8,000</td>
+<td align="center">969</td>
+<td align="center">98</td>
+<td align="center">100</td>
+</tr>
+<tr>
+<td align="center">9,000</td>
+<td align="center">1270</td>
+<td align="center">129</td>
+<td align="center">131</td>
+</tr>
+<tr>
+<td align="center">10,000</td>
+<td align="center">1612</td>
+<td align="center">163</td>
+<td align="center">165</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Approximate DBSCAN Run Times with Epsilon = 1 and Min Points = 1 (in
+  seconds)</p>
+</blockquote>
+<h2 id="visualization">Visualization</h2>
+<p>Once DBSCAN is completed, results can be visualized in two ways.
+However, there is a possibility that visualization may not occur. If a
+data set is too large, the results will not be visualized and a message
+will be displayed.</p>
+<blockquote>
+<p>Note: Due to the rendering of the Cluster / Gene Table, run times may
+appear longer than estimated in <a href="#run-times-of-dbscan">here</a>.</p>
+</blockquote>
+<h3 id="circles">Circles</h3>
+<p>The default visualization on the tool is circle packing. This represents
+the clusters and the genes within them. The outermost circle is the
+entire data set. The darker blue circles within represent the different
+clusters. The circles within the clusters represent the genes that
+belong to the cluster. The color of each gene denotes the species.</p>
+<p>To see more information about the cluster, you can click on the cluster.
+This will zoom in on the cluster and display gene IDs. Clicking on a
+gene ID will redirect to a search for that gene within the GeneWeaver
+database.</p>
+<p>Below is an example of the circle packing visualization with zoom
+functionality.</p>
+<p><img alt="" src="../../assets/images/Circle_Visualization.png" title="Circle Visualization.png" /></p>
+<h3 id="wires">Wires</h3>
+<p>The other visualization is a wire representation. This shows the
+connections between all genes in the same gene set. The color of each
+gene shows which cluster the gene is in. If a gene is grey, it is
+considered noise. Mousing over a circle will highlight it and show the
+gene ID. By clicking and holding a gene, you can drag the gene
+around the screen.</p>
+<blockquote>
+<p>Note: This visualization will only be drawn with small data sets due to
+the complexity of drawing all lines between genes.</p>
+</blockquote>
+<p>Below is an example of the wires visualization.</p>
+<p><img alt="" src="../../assets/images/Screen_Shot_2016-12-01_at_8.30.43_PM.png" /></p>
+<h3 id="cluster-gene-table">Cluster / Gene Table</h3>
+<p>Below the visualizations is a table. This table is split up into
+clusters, which contains all the genes within that specific cluster.
+Information about each gene can be seen here as well. This table is
+similar to the one on the <strong>GeneSet Details</strong> page.</p>
+<p><img alt="" src="../../assets/images/Table_Visualization.png" /></p>
+<p>If the data set becomes sufficiently large, a minimized table will be
+shown on screen. An example of the minimized table is below.</p>
+<p><img alt="" src="../../assets/images/Large_Table_Visualization.png" /></p>
+<h2 id="dbscan-example">DBSCAN Example</h2>
+<p>Below is an example of the DBSCAN algorithm. For this example, epsilon
+is set to 1 and min-points is set to 4. Figure 1 shows the gene-to-gene
+set bipartite graph.</p>
+<p><img alt="" src="../../assets/images/DBSCAN_Gene_To_Gene_Set.png" title="fig:DBSCAN_Gene_To_Gene_Set.png" /></p>
+<p><em>Figure 1</em>: The gene-to-gene set bipartite graph</p>
+<h3 id="finding-shortest-paths-between-genes">Finding Shortest Paths Between Genes</h3>
+<p>Starting at "Test Set 0" Prp31, Arr1, baz, and car are all in the same
+gene set. This means that when building the gene-to-gene graph, all of
+those genes will be connected to each other. "Test Set 1" shows that
+Arr1 and veli are connected. "Test Set 2"has veli and Arr2 connected.
+"Test Set 3" has Arr2 connected to CalX. Finally, "Test Set 4" has CalX,
+CdsA, and Cerk connected. Now that the connections between genes are
+determined, a map can be drawn showing these connections (Figure 2).</p>
+<p><img alt="" src="../../assets/images/DBSCAN_Gene_To_Gene.png" title="fig:DBSCAN_Gene_To_Gene.png" /></p>
+<p><em>Figure 2</em>: The gene-to-gene graph denoting shortest paths</p>
+<p>Using this graph, the shortest path from a gene to any other gene can be
+determined. For example, the distance between Arr1 and baz is 1. The
+distance between Prp31 and CalX is 4. This is important when applying
+epsilon to the algorithm.</p>
+<h3 id="running-the-dbscan-algorithm">Running the DBSCAN Algorithm</h3>
+<p>This is the pseudocode for the algorithm.</p>
+<p><img alt="DBSCAN
+Pseudocode" src="../../assets/images/DBSCAN_Algorithm_Pseudocode.png" title="DBSCAN Pseudocode" /></p>
+<p>Starting in the DBSCAN function, the cluster is first initialized to 0.
+Next, each point is visited only once. For this example, baz will be the
+first gene visited. baz will first be marked as visited, then the
+neighbors of baz will be found by regionQuery. The regionQuery function
+will return all points within radius epsilon, including the point
+itself. Calling regionQuery on baz with epsilon will return all genes
+that are one away from baz. In this example baz, car, Prp31, and Arr1
+are returned and listed as baz's neighbors.</p>
+<p><img alt="" src="../../assets/images/Screen_Shot_2016-11-29_at_6.17.30_PM.png" /></p>
+<p>The list of [baz, car, Prp31, Arr1] are returned. Now the amount of
+items in the list is checked with the minPoints parameter. If it is
+greater than or equal to minPoints, a cluster is formed. Otherwise, the
+point is labelled as noise. In this example, baz has 4 neighbors, which
+is equal to the number of points. The "C = next cluster" statement means
+that C is a valid cluster. Next, the expandCluster function is called.</p>
+<p>The expandCluster will continue to expand the cluster until the edge of
+the cluster is reached. The edge of a cluster is reached when a point
+has a list of neighbors that is less than the number of minPoints. When
+entering the expandCluster function, the point P will be added to the
+cluster. The cluster is currently [baz]. Next, the algorithm runs
+through all of the neighbors to see if the cluster can be expanded. The
+list of neighbor points is now [baz, car, Prp31, Arr1]. First baz is
+checked, but because it has already been visited, it is not going to
+be checked again. Next, car is checked. Car will then return a list of
+all its neighbors, which are [car, baz, Prp31, Arr1]. Then that list
+is checked against the number of minPoints. Since it is greater than or
+equal to minPoints, that list is added to the original list of
+neighbors. The original neighbors list of [baz, car, Prp31, Arr1]
+and the new neighbors list of [car, baz, Prp31, Arr1] are added
+together. However, the algorithm does not add duplicate genes to the
+list. Therefore, nothing is added to the list and the neighbors list is
+[baz, car, Prp31, Arr1]. Then, the gene is added to the current
+cluster if it is not already part of a cluster. car is not a part of any
+other cluster so it is added to the current cluster. Now the cluster
+contains [baz, car].</p>
+<p>Next, Prp31 is checked. Its neighbors are [baz, car, Prp31, Arr1].
+This list is equal to minPoints, but once again, the list of Prp31's
+neighbors are already in the list of baz's neighbors. Nothing is
+added to new neighbors, and since Prp31 is not a part of any other
+cluster, it is added to the current cluster, which is now [baz, car,
+Prp31].</p>
+<p>Now, Arr1 is checked. Its neighbors are [Arr1, baz, car, Prp31,
+veli]. Notice that a new gene appeared in Arr1's neighbors (veli). This
+gene is now added to the list of baz's neighbors. Arr1 is added to the
+current cluster, so the cluster now holds [baz, car, Prp31, Arr1]. Now
+there is still one gene left to check in baz's neighbors, which is veli.</p>
+<p><img alt="" src="../../assets/images/Screen_Shot_2016-11-30_at_11.18.18_PM.png" title="Screen_Shot_2016-11-30_at_11.18.18_PM.png" /></p>
+<p>veli is checked and it's neighbors are [veli, Arr1, Arr2]. The list is
+less than the number of minPoints, which means the cluster cannot be
+expanded past veli.</p>
+<p><img alt="" src="../../assets/images/Screen_Shot_2016-11-30_at_11.21.40_PM.png" /></p>
+<p>However, veli is still part of the current cluster. The current cluster
+is now [baz, car, Prp31, Arr1, veli]. Since the list of baz's
+neighbors have all been checked, the cluster is finished.</p>
+<p><img alt="" src="../../assets/images/NewSlide24.jpg" title="NewSlide24.jpg" /></p>
+<p>Now that baz has been checked, it is time to check other genes. Next,
+car is checked. However, it was already visited when handling baz's
+neighbors, so nothing needs to be checked. The same applies for Prp31,
+Arr1, and veli. The next gene to check is Arr2. Arr2's neighbors are
+[veli, Arr2, CalX]. This is less than minPoints, so it is marked as
+noise.</p>
+<p><img alt="" src="../../assets/images/NewSlide25.jpg" title="NewSlide25.jpg" /></p>
+<p>However, just because a gene is marked as noise, does not guarantee it
+is noise when the algorithm is finished. Later in the algorithm, it can
+be added to a cluster.</p>
+<p><img alt="" src="../../assets/images/NewSlide26.jpg" title="NewSlide26.jpg" /></p>
+<p>Next, CalX is checked. It's neighbors are [CalX, Arr2, CdsA, Cerk].
+This list is equal to minPoints, so the cluster needs to be expanded.</p>
+<p><img alt="" src="../../assets/images/NewSlide28.jpg" title="NewSlide28.jpg" /></p>
+<p>CalX is checked, but it is already visited, and it is not a part of any
+cluster, so it is added to the 2^nd^ cluster. The 2^nd^ cluster
+currently holds [CalX]. Next, Arr2 is checked, but it was already
+visited and marked as noise. However, it is not in any cluster, so it is
+added to the 2^nd^ cluster. The 2^nd^ cluster now contains [CalX,
+Arr2]. Next, CdsA is checked. Its neighbors are [CdsA, Cerk, CalX].
+This list is not greater than minPoints so nothing is added. CdsA is not
+added to the 2^nd^ cluster because it is not part of the first cluster.
+The 2^nd^ cluster is now [CalX, Arr2, CdsA]. Finally, Cerk is checked.
+Its neighbors are [CdsA, CalX]. The list is smaller than minPoints, so
+they are not added to Calx's neighbors. Cerk is not a part of any
+cluster, so it is added to the 2^nd^ cluster. The 2^nd^ cluster is now
+complete. It contains [CalX, Arr2, CdsA, Cerk].</p>
+<p>Now that CalX is checked, CdsA is checked. It was already visited in the
+expandCluster function so nothing needs to be done. The same applies for
+Cerk. The algorithm is now complete.</p>
+<p>Two clusters were produced: [baz, car, Prp31, Arr1, Veli] and [Arr2,
+CalX, CdsA, Cerk]</p>
+<p>Figure 3 shows the gene-to-gene map visualized in clusters.</p>
+<p><img alt="" src="../../assets/images/NewSlide37.jpg" title="NewSlide37.jpg" /></p>
+<p><em>Figure 3</em>: The result of the DBSCAN clustering</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../clustering/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GeneSet Clustering">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                GeneSet Clustering
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../mset/" class="md-footer__link md-footer__link--next" aria-label="Next: MSET">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                MSET
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      These pages are maintained by the GeneWeaver team and the Chesler Lab at The Jackson Laboratory in Bar Harbor, Maine.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/orgs/TheJacksonLaboratory/repositories?q=geneweaver" target="_blank" rel="noopener" title="GitHub Repositories" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://pypi.org/search/?q=geneweaver" target="_blank" rel="noopener" title="Python Packages" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://geneweaver.org" target="_blank" rel="noopener" title="Geneweaver Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://geneweaver.jax.org/api/docs" target="_blank" rel="noopener" title="Geneweaver API" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
