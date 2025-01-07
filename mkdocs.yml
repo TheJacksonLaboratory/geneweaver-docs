@@ -97,6 +97,15 @@ nav:
       - External Source Data: concepts/geneweaver-data.md
       - Geneweaver Data Model: concepts/geneweaver-data-model.md
       - Package Based Architecture: concepts/package-based-architecture.md
+  - 'Web Application':
+      - web-application/index.md
+      - User Registration: web-application/user-registration.md
+      - Uploading GeneSets: web-application/uploading-genesets.md
+      - Batch Upload: web-application/batch-upload.md
+      - View Genesets: web-application/view-genesets.md
+      - Users and Groups: web-application/users-and-groups.md
+      - Projects: web-application/projects.md
+      - Notifications: web-application/notifications.md
   - Tutorial:
       - tutorial/index.md
       - Client Login: tutorial/geneweaver_client_login.ipynb
@@ -137,6 +146,8 @@ nav:
           - reference/curation/index.md
           - Standards: reference/curation/curation-standards.md
           - Process: reference/curation/curation-process.md
+          - Definitions: reference/curation/general-definitions.md
+          - GeneSet Types: reference/curation/geneset-type-standards.md
       - ReST API: reference/restful-api.md
       - Available Packages: reference/available-packages.md
       - Data Model: reference/data-model.md
